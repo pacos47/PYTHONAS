@@ -1,0 +1,2573 @@
+<!DOCTYPE html>
+<!-- saved from url=(0275)https://mathesis.cup.gr/courses/course-v1:ComputerScience+CS1.1+2017_T4/courseware/8fffe36b6d0d427f983ac47ff72497da/07ab52063b0e4cdc89cfd53fe778b747/?activate_block_id=block-v1%3AComputerScience%2BCS1.1%2B2017_T4%2Btype%40sequential%2Bblock%4007ab52063b0e4cdc89cfd53fe778b747 -->
+<html lang="el"><!--<![endif]--><head dir="ltr"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  
+<title data-base-title="
+ 2: Συμβολοσειρές strings | ΗΥ1.1 - Υλικό Μαθήματος | Mathesis">
+  
+ Σημειώσεις | 2: Συμβολοσειρές strings | ΗΥ1.1 - Υλικό Μαθήματος | Mathesis
+</title>
+
+
+      <script src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/1076740802350386" async=""></script><script async="" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/fbevents.js"></script><script type="text/javascript" async="" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/analytics.js"></script><script async="" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/gtm.js"></script><script type="text/javascript">
+        /* immediately break out of an iframe if coming from the marketing website */
+        (function(window) {
+          if (window.location !== window.top.location) {
+            window.top.location = window.location;
+          }
+        })(this);
+      </script>
+
+  
+
+  <script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/djangojs.js"></script>
+  <script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/ie11_find_array.bd1c6dc7a133.js"></script>
+  
+  <link rel="icon" type="image/x-icon" href="https://mathesis.cup.gr/static/EuCup/images/favicon.f94930b22ad1.ico">
+
+
+
+  
+  
+
+    <link href="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/lms-style-vendor.68e48093f5dd.css" rel="stylesheet" type="text/css">
+
+
+
+    
+  
+
+    <link href="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/lms-main-v1.df88fa5067ca.css" rel="stylesheet" type="text/css">
+
+
+
+
+    
+    
+<script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/lms-main_vendor.3c3c9a2604d6.js" charset="utf-8"></script>
+
+
+    
+    
+<script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/lms-application.0e3fae472a20.js" charset="utf-8"></script>
+
+
+
+  
+    
+    
+    <script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/commons.deb13d761647919357f4.4873d080fceb.js"></script>
+
+
+
+  <script>
+    window.baseUrl = "/static/";
+    (function (require) {
+      require.config({
+          baseUrl: window.baseUrl
+      });
+    }).call(this, require || RequireJS.require);
+  </script>
+  <script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/require-config.38226099c6ad.js"></script>
+  
+    <script type="text/javascript">
+        (function (require) {
+          require.config({
+              paths: {
+                'course_bookmarks/js/views/bookmark_button': 'course_bookmarks/js/views/bookmark_button.d4cfaf3361fa',
+'js/views/message_banner': 'js/views/message_banner.91290dbe25ba',
+'moment': 'common/js/vendor/moment-with-locales.43ec67e44612',
+'moment-timezone': 'common/js/vendor/moment-timezone-with-data.60142e6c4416',
+'js/courseware/course_info_events': 'js/courseware/course_info_events.2fc35b57627f',
+'js/courseware/accordion_events': 'js/courseware/accordion_events.6064c7809de5',
+'js/dateutil_factory': 'js/dateutil_factory.be68acdff619',
+'js/courseware/link_clicked_events': 'js/courseware/link_clicked_events',
+'js/courseware/toggle_element_visibility': 'js/courseware/toggle_element_visibility.d5f10bc65ed0',
+'js/student_account/logistration_factory': 'js/student_account/logistration_factory.a85db3a3eb2d',
+'js/courseware/courseware_factory': 'js/courseware/courseware_factory.1504fc10caef',
+'js/groups/views/cohorts_dashboard_factory': 'js/groups/views/cohorts_dashboard_factory.ca68388d81d6',
+'js/groups/discussions_management/discussions_dashboard_factory': 'js/discussions_management/views/discussions_dashboard_factory.2e10d9097343',
+'draggabilly': 'js/vendor/draggabilly.26caba6f7187',
+'hls': 'common/js/vendor/hls.8f15a0109b05'
+            }
+          });
+        }).call(this, require || RequireJS.require);
+    </script>
+  
+
+  
+
+  
+
+    <link href="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/lms-style-course-vendor.730dda42e3c1.css" rel="stylesheet" type="text/css">
+
+
+
+
+  
+
+    <link href="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/lms-course.4fbed3c11899.css" rel="stylesheet" type="text/css">
+
+
+
+
+<script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/jquery.autocomplete.3bd10d7510d2.js"></script>
+<script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/tooltip_manager.b8fa94d4cefc.js"></script>
+
+<link href="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/jquery.autocomplete.896181d3ec33.css" rel="stylesheet" type="text/css">
+  
+
+  
+
+  
+
+
+  
+
+
+<script type="application/json" id="user-metadata">
+    {"username": "pacos", "user_id": 29977, "course_id": "course-v1:ComputerScience+CS1.1+2017_T4", "enrollment_mode": "credit", "upgrade_link": null, "upgrade_price": "$15", "audit_access_deadline": null, "course_duration": null, "pacing_type": "instructor_paced", "has_staff_access": false, "forum_roles": [["Student"]], "partition_groups": {"Enrollment Track Groups": [1, "\u0391\u03ba\u03c1\u03bf\u03b1\u03c4\u03ad\u03c2"]}, "has_non_audit_enrollments": true, "program_key_fields": null, "email": "pacos47@gmail.com", "schedule_start": null, "enrollment_time": "2018-04-27T09:35:17+00:00", "course_start": "2017-10-17T00:00:00+00:00", "course_end": "2018-01-23T00:00:00+00:00", "dynamic_upgrade_deadline": null, "course_upgrade_deadline": null, "course_key_fields": {"org": "ComputerScience", "course": "CS1.1", "run": "2017_T4"}}
+</script>
+
+  
+<!--div style="background:red;text-align:center;padding-top:10px;padding-bottom:10px;line-height:25px;font-size:1.2em;"><b>ΠΡΟΣΟΧΗ: Λόγω τεχνικών προβλημάτων θα δοθεί τουλάχιστον μια ημέρα παράταση στην προθεσμία υποβολής των τεστ. </b></div-->
+<!--div style="background:lightgreen;text-align:center;padding-top:10px;padding-bottom:10px;line-height:24px;font-size:1.1em;"><b>ΠΡΟΣΟΧΗ: Στις .... θα πραγματοποιηθεί δίωρη προγραμματισμένη διακοπή των υπηρεσιών μας. Παρακαλώ αποθηκεύσετε τις εργασίες σας. </b></div-->
+	<!--div style="background:red;text-align:center;padding-top:10px;padding-bottom:10px;line-height:25px;font-size:1.2em;"><b>ΠΡΟΣΟΧΗ: Bρισκόμαστε σε αναβάθμιση και οι εργασίες σας δεν θα αποθηκεύονται. <span class="sLine">Σύντομα και πάλι κοντά σας.</b></span></div-->
+<!--div style="background:#BC544B;text-align:left;padding:10px;line-height:25px;font-size:1.2em;"><b>Αγαπητοί φίλοι και φίλες του Mathesis,
+<br/>
+Από την Τετάρτη 5/5/2021 ορισμένες λειτουργίες της πλατφόρμας δεν θα είναι προσωρινά διαθέσιμες, επειδή βρισκόμαστε σε διαδικασία αναβάθμισης. Κατά διαστήματα ενδεχομένως να διακόπτεται πλήρως η πρόσβαση στην πλατφόρμα. Τα ενεργά τεστ και οι συζητήσεις θα απενεργοποιηθούν για όσο διαρκέσει η αναβάθμιση. Αναμένουμε να επανέλθουμε σε πλήρη λειτουργία την Παρασκευή 7/5/2021.
+<span class="sLine">Ευχαριστούμε για την κατανόηση!</span></div-->
+<!--div style="background:black;text-align:center;padding-top:10px;padding-bottom:10px;line-height:25px;font-size:1.2em;">&nbsp; </div-->
+
+<link rel="preconnect" href="https://fonts.gstatic.com/">
+<link href="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/css2" rel="stylesheet">
+<link href="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/default.min.css">
+<script src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/highlight.min.js"></script>
+
+<!--link rel="stylesheet" type="text/css" href="/static/EuCup/css/ng.css" /-->
+<style>
+/*global*/
+/*courses homepage GLOBAL STUFF*/
+html, body{
+background:#efefef!important;
+}
+/*to eliminate the space above footer*/
+.wrapper-footer{
+margin-top:0px!important;
+box-shadow:none!important;
+border-top:none!important;
+}
+.wrapper-footer, .home{
+background:#efefef!important
+}
+.global-header{
+background:#efefef!important;
+}
+.global-header .main-header{
+max-width:1300px;
+margin:auto;
+}
+.global-header .nav-links .secondary .dropdown-user-menu{
+z-index:15;
+}
+@media (max-width: 1900px) and (min-width: 1600px){
+.global-header .nav-links .secondary .dropdown-user-menu{
+right:185px;
+}
+}
+@media (max-width: 2250px) and (min-width: 1900px){
+.global-header .nav-links .secondary .dropdown-user-menu{
+right:350px;
+}
+}
+@media (max-width: 2600px) and (min-width: 2250px){
+.global-header .nav-links .secondary .dropdown-user-menu{
+right:560px;
+}
+}
+@media (max-width: 2950px) and (min-width: 2600px){
+.global-header .nav-links .secondary .dropdown-user-menu{
+right:700px;
+}
+}
+@media (min-width: 2950px){
+.global-header .nav-links .secondary .dropdown-user-menu{
+right:860px;
+}
+}
+@media (max-width: 700px){
+.course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1{
+font-size:large!important;
+line-height:1.2;
+}
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a{
+font-size:small!important;
+line-height:1.3!important;
+}
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong{
+font-size:small!important;
+line-height:1.3!important;
+}
+}
+.header-global{
+background:#efefef!important;
+}
+.find-courses, .university-profile{
+background:none;
+}
+.content-wrapper{
+max-width:1220px;
+margin-left:auto;
+margin-right:auto;
+padding-bottom:0px!important;
+background:#efefef!important;
+}
+/*.learn-more{
+left: calc(50%-105px)!important;
+width: 210px!important;
+}*/
+.highlighted-courses .courses{
+padding-top:0px!important;
+}
+.course-title a{color:grey!important;}
+.courses-container .courses .course .course-info .course-title{
+color:grey!important;
+line-height:21px!important;
+font-size:17px!important;
+}
+.home>header {
+background:none!important;
+box-shadow:none!important;
+}
+
+.home>header .title{
+text-align:center;
+box-shadow:none!important;
+background:none!important; /*this is for the color just under slogan NO AVAILABLE VARIABLE*/
+}
+.home>header .title>.heading-group,
+.home>header .title>.heading-group h1{
+text-align:center;
+}
+.home>header .title>.heading-group p{
+font-family:"Noto Sans";
+}
+/*find-courses*/
+.find-courses .courses{
+padding-top:70px!important;
+}
+.dashboard .my-courses .course .details .course-title a, .dashboard .my-courses .course .details .course-title span{
+font-weight:inherit!important;
+font-size:1.5em!important;
+}
+
+.dashboard .my-courses .course .details .course-title a, .dashboard .my-courses .course .details .course-title span, .find-courses .wrapper-search-context .search-status-label{
+line-height:1.2em;
+}
+/*DASHBOARD*/
+.dashboard .side-container{
+display:none;
+}
+/*fix color of the borders in dashboard*/
+.dashboard .my-courses .listing-courses .course-item, 
+.dashboard .my-courses .wrapper-header-courses{
+border-bottom-color:#cfcfcf!important;
+}
+.dashboard .my-courses .listing-courses .course-item .course-container{
+border:1px solid #cfcfcf!important;
+}
+h3 a, h3 a:visited{
+color:grey;
+}
+h3 a:hover, a:focus{
+color:#0079bc;
+}
+.course-actions a:hover{
+color:white;
+}
+.dashboard .my-courses .course .details .course-actions .action:hover, .dashboard .my-courses .course .details .course-actions .action:focus{
+color:black!important;
+}
+/*hide helo*/
+a.help-link{display:none;}
+.window-wrap{background:none!important;}
+.login-register-content{background:none!important;}
+.login-register, .financial-assistance-wrapper .financial-assistance-form{background:none!important;}
+
+/*For overflowing the title */
+.global-header .header-logo .course-header{
+text-overflow:ellipsis;
+white-space:nowrap;
+overflow:hidden;
+line-height:1.2em;
+width:30%;
+}
+.global-header .header-logo .course-header .provider{
+display:none;
+}
+.global-header .header-logo .course-header .course-number{
+display:block;
+}
+.global-header .header-logo .course-header .course-name{
+display:inline-block;
+}
+/*remove the double title for every xblock*/
+.xblock .xblock h2{
+display:none;
+}
+
+.forum-nav-thread-wrapper-1{
+max-width:calc(100% - 96px);
+
+}
+/* student profile, delete a button */
+.view-profile .profile-self .wrapper-profile-field-account-privacy .wrapper-profile-records{
+display:none!important;
+}
+/* account settings*/
+.wrapper-account-settings .wrapper-header .account-nav{
+display:none;
+}
+div.account-deletion-details{
+/*display:none;*/
+}
+/*the following are added features*/
+img.rs{
+float: left; 
+margin-right: 10px;
+width: 200px;
+height: auto;
+}
+.ngm{
+   font-family:times;
+    font-size:1.15em;
+}
+.ngj{
+text-align:justify;
+}
+.sLine{
+overflow: hidden;
+white-space: nowrap;
+}
+div.shortdesc{
+margin-bottom:3px;
+font-weight:bold;
+}
+span.shortdesc{
+font-style:italic;
+}
+
+.wiki-wrapper section.wiki .main-article {
+line-height:1.4em;
+}
+</style>
+<script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/highslide-with-html.js"></script>
+<link rel="stylesheet" type="text/css" href="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/highslide.css">
+<script type="text/javascript">
+        hs.graphicsDir = '/static/EuCup/css/highslide/graphics/';
+        hs.outlineType = 'rounded-white';
+        hs.showCredits = false;
+        hs.wrapperClassName = 'draggable-header';
+</script>
+<!-- this file is head-extra -->
+
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T7VND5R');</script>
+<!-- End Google Tag Manager -->
+
+
+
+  
+
+
+  
+
+
+<!-- dummy Segment -->
+<script type="text/javascript">
+  var analytics = {
+    track: function() { return; },
+    trackLink: function() { return; },
+    pageview: function() { return; },
+    page: function() { return; }
+  };
+</script>
+<!-- end dummy Segment -->
+
+
+  <meta name="path_prefix" content="">
+  
+
+  <meta name="openedx-release-line" content="koa">
+
+
+
+
+
+<style type="text/css">.highslide img {cursor: url(/static/EuCup/css/highslide/graphics/zoomin.cur), pointer !important;}</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="/static/js/commerce/track_ecommerce_events.0a92c313c996.js?raw" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/track_ecommerce_events.0a92c313c996.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="/static/js/dateutil_factory.be68acdff619.js?raw" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/dateutil_factory.be68acdff619.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/commerce/track_ecommerce_events" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/track_ecommerce_events.js"></script><style></style></head>
+
+<body class="ltr view-in-course view-courseware courseware  lang_el" cz-shortcut-listen="true"><div class="cc-revoke cc-bottom cc-animate cc-color-override-688238583" style="">Πολιτική cookies</div><div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-banner cc-type-opt-in cc-theme-classic cc-bottom cc-color-override-688238583 cc-invisible" style="display: none;"><!--googleoff: all--><span id="cookieconsent:desc" class="cc-message"><small>Τα απαραίτητα cookies είναι αναγκαία για την ορθή λειτουργία της σελίδας. Τα cookies στατιστικής και προώθησης δεν είναι αναγκαία, αλλά μας βοηθούν να βελτιώσουμε τις υπηρεσίες που σας προσφέρουμε. Αυτά τα cookies συλλέγουν πληροφορίες σχετικά με τον τρόπο που οι επισκέπτες χρησιμοποιούν την σελίδα. Επίσης μπορεί να χρησιμοποιηθούν για την προβολή διαφημίσεων στα κοινωνικά δίκτυα οι οποίες ταιριάζουν στα ενδιαφέροντά σας ή για την μέτρηση της αποτελεσματικότητας μιας διαφήμισης. Τα προαιρετικά cookies συλλέγουν συγκεντρωτικές, ανώνυμες πληροφορίες.</small> <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link" href="https://mathesis.cup.gr/honor" rel="noopener noreferrer nofollow" target="_blank"><small>Μάθετε περισσότερα</small></a></span><div class="cc-compliance cc-highlight"><a aria-label="deny cookies" role="button" tabindex="0" class="cc-btn cc-deny">Δεν αποδέχομαι τα μη αναγκαία cookies</a><a aria-label="allow cookies" role="button" tabindex="0" class="cc-btn cc-allow">Αποδέχομαι όλα τα cookies</a></div><!--googleon: all--></div><div id="MathJax_Message" style="display: none;"></div>
+
+
+<div id="page-prompt"></div>
+  <div class="window-wrap" dir="ltr">
+    
+    <a class="nav-skip sr-only sr-only-focusable" href="https://mathesis.cup.gr/courses/course-v1:ComputerScience+CS1.1+2017_T4/courseware/8fffe36b6d0d427f983ac47ff72497da/07ab52063b0e4cdc89cfd53fe778b747/?activate_block_id=block-v1%3AComputerScience%2BCS1.1%2B2017_T4%2Btype%40sequential%2Bblock%4007ab52063b0e4cdc89cfd53fe778b747#main">Skip to main content</a>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="global-header slim">
+    <div class="main-header">
+        
+
+
+
+
+
+
+
+<h1 class="header-logo">
+    <a href="https://mathesis.cup.gr/dashboard">
+      
+        <img class="logo" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/logo.8d6b78c2c7da.png" alt="Mathesis Home Page">
+      
+    </a>
+    <div class="course-header">
+      <span class="provider">Επιστήμη Υπολογιστών:</span>
+      <span class="course-number">ΗΥ1.1</span>
+      
+      <span class="course-name">Εισαγωγή στην Python (Αρχειοθετημένο)</span>
+    </div>
+</h1>
+
+        <div class="hamburger-menu" role="button" aria-label="Options" menu="" aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+            
+
+
+
+
+
+
+
+
+<div class="nav-links">
+  <div class="main">
+      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+          <a class="tab-nav-link discover-new-link" href="https://mathesis.cup.gr/courses" aria-current="page">
+             Αναζήτηση Μαθημάτων
+          </a>
+      </div>
+  </div>
+  <div class="secondary">
+    <div class="mobile-nav-item hidden-mobile nav-item">
+      <a class="help-link" href="http://edx.readthedocs.io/projects/open-edx-learner-guide/en/open-release-koa.master/index.html" rel="noopener" target="_blank">Βοήθεια </a>
+    </div>
+    
+
+
+
+
+
+
+<div class="nav-item hidden-mobile">
+    <a href="https://mathesis.cup.gr/dashboard" class="menu-title">
+        <img data-hj-suppress="" class="user-image-frame" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/default_50.3455a6581573.png" alt="">
+        <span class="sr-only">Dashboard for:</span>
+        <span data-hj-suppress="" class="username">pacos</span>
+    </a>
+</div>
+<div class="nav-item hidden-mobile nav-item-dropdown" tabindex="-1">
+    <div class="toggle-user-dropdown" role="button" aria-label="Options" menu="" aria-expanded="false" tabindex="0" aria-controls="user-menu">
+        <span class="fa fa-caret-down" aria-hidden="true"></span>
+    </div>
+    <div class="dropdown-user-menu hidden" aria-label="More" options="" role="menu" id="user-menu" tabindex="-1">
+            <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="https://mathesis.cup.gr/dashboard" role="menuitem">Μαθήματα</a></div>
+
+        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="https://mathesis.cup.gr/u/pacos" role="menuitem">Προσωπική σελίδα</a></div>
+        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="https://mathesis.cup.gr/account/settings" role="menuitem">Λογαριασμός </a></div>
+        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="https://mathesis.cup.gr/logout" role="menuitem">Αποσύνδεση</a></div>
+    </div>
+</div>
+
+  </div>
+</div>
+
+    </div>
+    <div class="mobile-menu hidden" aria-label="More" options="" role="menu" id="mobile-menu"><div class="mobile-nav-item hidden-mobile nav-item nav-tab mobile-nav-link">
+          <a class="tab-nav-link discover-new-link" href="https://mathesis.cup.gr/courses" aria-current="page" role="menuitem">
+             Αναζήτηση Μαθημάτων
+          </a>
+      </div><div class="mobile-nav-item hidden-mobile nav-item mobile-nav-link">
+      <a class="help-link" href="http://edx.readthedocs.io/projects/open-edx-learner-guide/en/open-release-koa.master/index.html" rel="noopener" target="_blank" role="menuitem">Βοήθεια </a>
+    </div><div class="mobile-nav-item dropdown-item dropdown-nav-item mobile-nav-link"><a href="https://mathesis.cup.gr/dashboard" role="menuitem">Μαθήματα</a></div><div class="mobile-nav-item dropdown-item dropdown-nav-item mobile-nav-link"><a href="https://mathesis.cup.gr/u/pacos" role="menuitem">Προσωπική σελίδα</a></div><div class="mobile-nav-item dropdown-item dropdown-nav-item mobile-nav-link"><a href="https://mathesis.cup.gr/account/settings" role="menuitem">Λογαριασμός </a></div><div class="mobile-nav-item dropdown-item dropdown-nav-item mobile-nav-link"><a href="https://mathesis.cup.gr/logout" role="menuitem">Αποσύνδεση</a></div></div>
+</header>
+
+<!--[if lte IE 9]>
+<div class="ie-banner" aria-hidden="true"><strong>Warning:</strong> Your browser is not fully supported. We strongly recommend using <a href="https://www.google.com/chrome" rel="noopener" target="_blank">Chrome</a> or <a href="http://www.mozilla.org/firefox" rel="noopener" target="_blank">Firefox</a>.</div>
+<![endif]-->
+
+
+
+
+        
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <div class="marketing-hero"></div>
+
+    <div class="content-wrapper main-container" id="content" dir="ltr">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/template" id="image-modal-tpl">
+    <div class="wrapper-modal wrapper-modal-image">
+  <section class="image-link">
+    <%= smallHTML%> <% // xss-lint: disable=underscore-not-escaped %>
+    <a href="#" class="modal-ui-icon action-fullscreen" role="button">
+      <span class="label">
+        <span class="icon fa fa-arrows-alt fa-large" aria-hidden="true"></span> <%- gettext("Fullscreen") %>
+      </span>
+    </a>
+  </section>
+
+  <section class="image-modal">
+    <section class="image-content">
+      <div class="image-wrapper">
+        <img alt="<%- largeALT %>, <%- gettext('Large') %>" src="<%- largeSRC %>" />
+      </div>
+
+      <a href="#" class="modal-ui-icon action-close" role="button">
+        <span class="label">
+          <span class="icon fa fa-remove fa-large" aria-hidden="true"></span> <%- gettext("Close") %>
+        </span>
+      </a>
+
+      <ul class="image-controls">
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-in" role="button">
+            <span class="label">
+              <span class="icon fa fa fa-search-plus fa-large" aria-hidden="true"></span> <%- gettext("Zoom In") %>
+            </span>
+          </a>
+        </li>
+
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-out is-disabled" aria-disabled="true" role="button">
+            <span class="label">
+              <span class="icon fa fa fa-search-minus fa-large" aria-hidden="true"></span> <%- gettext("Zoom Out") %>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </section>
+</div>
+
+</script>
+
+
+
+
+
+
+
+
+<div class="message-banner" aria-live="polite"></div>
+
+  
+
+
+
+
+
+
+
+
+    
+        <nav class="courseware wrapper-course-material" aria-label="Course Material">
+            <div class="course-material">
+                
+                <ol class="tabs course-tabs">
+                    
+
+
+
+
+
+  
+  <li class="tab">
+  <a href="https://mathesis.cup.gr/courses/course-v1:ComputerScience+CS1.1+2017_T4/course/" class="active">
+  Υλικό Μαθήματος
+      <span class="sr">, current location</span>
+  </a>
+  </li>
+  
+  <li class="tab">
+  <a href="https://mathesis.cup.gr/courses/course-v1:ComputerScience+CS1.1+2017_T4/progress" class="">
+  Πρόοδος
+  </a>
+  </li>
+  
+  <li class="tab">
+  <a href="https://mathesis.cup.gr/courses/course-v1:ComputerScience+CS1.1+2017_T4/discussion/forum/" class="">
+  Συζήτηση
+  </a>
+  </li>
+
+                    
+                </ol>
+            </div>
+        </nav>
+
+
+<div class="container" lang="el">
+  <div class="course-wrapper" role="presentation">
+
+    <section class="course-content" id="course-content">
+        <header class="page-header has-secondary">
+            <div class="page-header-main">
+                <nav aria-label="Υλικό Μαθήματος" class="sr-is-focusable" tabindex="-1">
+                    <div class="has-breadcrumbs">
+                        <div class="breadcrumbs">
+                                <span class="nav-item nav-item-course">
+                                    <a href="https://mathesis.cup.gr/courses/course-v1:ComputerScience+CS1.1+2017_T4/course/">Υλικό Μαθήματος</a>
+                                </span>
+                                <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+                                <span class="nav-item nav-item-chapter" data-course-position="2" data-chapter-position="6">
+                                    <a href="https://mathesis.cup.gr/courses/course-v1:ComputerScience+CS1.1+2017_T4/course/#block-v1:ComputerScience+CS1.1+2017_T4+type@chapter+block@8fffe36b6d0d427f983ac47ff72497da">Εβδ. 1: Δεδομένα, Μεταβλητές και εκφράσεις</a>
+                                </span>
+                                <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+                                <span class="nav-item nav-item-section">
+                                    <a href="https://mathesis.cup.gr/courses/course-v1:ComputerScience+CS1.1+2017_T4/course/#block-v1:ComputerScience+CS1.1+2017_T4+type@sequential+block@07ab52063b0e4cdc89cfd53fe778b747">2: Συμβολοσειρές strings</a>
+                                </span>
+                                <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+                            <span class="nav-item nav-item-sequence">Σημειώσεις</span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main" tabindex="-1" aria-label="Content">
+
+              
+<div class="xblock xblock-student_view xblock-student_view-sequential xmodule_display xmodule_SequenceModule xblock-initialized" data-course-id="course-v1:ComputerScience+CS1.1+2017_T4" data-type="Sequence" data-init="XBlockToXModuleShim" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="sequential" data-usage-id="block-v1:ComputerScience+CS1.1+2017_T4+type@sequential+block@07ab52063b0e4cdc89cfd53fe778b747" data-request-token="e7f61fccecb011eba913a5099b084e0f" data-graded="False" data-has-score="False">
+  
+  
+
+
+<div id="sequence_07ab52063b0e4cdc89cfd53fe778b747" class="sequence" data-id="block-v1:ComputerScience+CS1.1+2017_T4+type@sequential+block@07ab52063b0e4cdc89cfd53fe778b747" data-position="1" data-ajax-url="/courses/course-v1:ComputerScience+CS1.1+2017_T4/xblock/block-v1:ComputerScience+CS1.1+2017_T4+type@sequential+block@07ab52063b0e4cdc89cfd53fe778b747/handler/xmodule_handler" data-next-url="/courses/course-v1:ComputerScience+CS1.1+2017_T4/courseware/8fffe36b6d0d427f983ac47ff72497da/eca4250872894ef48605642e29ce3832/?child=first" data-prev-url="/courses/course-v1:ComputerScience+CS1.1+2017_T4/courseware/8fffe36b6d0d427f983ac47ff72497da/bafa3df4c89044cd956cbc2523a50aed/?child=last" data-save-position="true" data-show-completion="true">
+
+  <div class="sequence-nav">
+    <button class="sequence-nav-button button-previous">
+      <span class="icon fa fa-chevron-prev" aria-hidden="true"></span>
+      <span class="sequence-nav-button-label">Προηγούμενο </span>
+    </button>
+    <button class="sequence-nav-button button-next">
+      <span class="sequence-nav-button-label">Επόμενο  </span>
+      <span class="icon fa fa-chevron-next" aria-hidden="true"></span>
+    </button>
+    <nav class="sequence-list-wrapper" aria-label="Sequence">
+      <ol id="sequence-list" role="tablist">
+        <li role="presentation">
+          <button class="seq_other nav-item tab active" role="tab" tabindex="0" aria-selected="true" aria-expanded="true" aria-controls="seq_content" data-index="0" data-id="block-v1:ComputerScience+CS1.1+2017_T4+type@vertical+block@81cbfeffe81b47418e72e65615232df7" data-element="1" data-page-title="Σημειώσεις" data-path="Εβδ. 1: Δεδομένα, Μεταβλητές και εκφράσεις &gt; 2: Συμβολοσειρές strings &gt; Σημειώσεις" data-graded="False" id="tab_0">
+            <span class="icon fa seq_other" aria-hidden="true"></span>
+              <span class="fa fa-check-circle check-circle is-hidden" style="color:green" aria-hidden="true"></span>
+            <span class="fa fa-fw fa-bookmark bookmark-icon is-hidden" aria-hidden="true"></span>
+            <div class="sequence-tooltip sr"><span class="sr">other&nbsp;</span>Σημειώσεις<span class="sr bookmark-icon-sr">&nbsp;</span></div>
+          </button>
+        </li>
+        <li role="presentation">
+          <button class="seq_video inactive nav-item tab" role="tab" tabindex="-1" aria-selected="false" aria-expanded="false" aria-controls="seq_content" data-index="1" data-id="block-v1:ComputerScience+CS1.1+2017_T4+type@vertical+block@df0fafb1b2d84949bdbf04654aeabfb4" data-element="2" data-page-title="V2.1 Συμβολοσειρές strings (12΄)" data-path="Εβδ. 1: Δεδομένα, Μεταβλητές και εκφράσεις &gt; 2: Συμβολοσειρές strings &gt; V2.1 Συμβολοσειρές strings (12΄)" data-graded="False" id="tab_1">
+            <span class="icon fa seq_video" aria-hidden="true"></span>
+              <span class="fa fa-check-circle check-circle is-hidden" style="color:green" aria-hidden="true"></span>
+            <span class="fa fa-fw fa-bookmark bookmark-icon is-hidden" aria-hidden="true"></span>
+            <div class="sequence-tooltip sr"><span class="sr">video&nbsp;</span>V2.1 Συμβολοσειρές strings (12΄)<span class="sr bookmark-icon-sr">&nbsp;</span></div>
+          </button>
+        </li>
+        <li role="presentation">
+          <button class="seq_problem inactive nav-item tab" role="tab" tabindex="-1" aria-selected="false" aria-expanded="false" aria-controls="seq_content" data-index="2" data-id="block-v1:ComputerScience+CS1.1+2017_T4+type@vertical+block@5cbb128eec6b46e2858aeef740442f9e" data-element="3" data-page-title="Q2.1" data-path="Εβδ. 1: Δεδομένα, Μεταβλητές και εκφράσεις &gt; 2: Συμβολοσειρές strings &gt; Q2.1" data-graded="False" id="tab_2">
+            <span class="icon fa seq_problem" aria-hidden="true"></span>
+              <span class="fa fa-check-circle check-circle is-hidden" style="color:green" aria-hidden="true"></span>
+            <span class="fa fa-fw fa-bookmark bookmark-icon is-hidden" aria-hidden="true"></span>
+            <div class="sequence-tooltip sr"><span class="sr">problem&nbsp;</span>Q2.1<span class="sr bookmark-icon-sr">&nbsp;</span></div>
+          </button>
+        </li>
+        <li role="presentation">
+          <button class="seq_video inactive nav-item tab" role="tab" tabindex="-1" aria-selected="false" aria-expanded="false" aria-controls="seq_content" data-index="3" data-id="block-v1:ComputerScience+CS1.1+2017_T4+type@vertical+block@3cd2271b429b4c8281a7ccfa37dff973" data-element="4" data-page-title="V2.2 Πράξεις – μέθοδοι συμβολοσειρών strings (12΄)" data-path="Εβδ. 1: Δεδομένα, Μεταβλητές και εκφράσεις &gt; 2: Συμβολοσειρές strings &gt; V2.2 Πράξεις – μέθοδοι συμβολοσειρών strings (12΄)" data-graded="False" id="tab_3">
+            <span class="icon fa seq_video" aria-hidden="true"></span>
+              <span class="fa fa-check-circle check-circle is-hidden" style="color:green" aria-hidden="true"></span>
+            <span class="fa fa-fw fa-bookmark bookmark-icon is-hidden" aria-hidden="true"></span>
+            <div class="sequence-tooltip sr"><span class="sr">video&nbsp;</span>V2.2 Πράξεις – μέθοδοι συμβολοσειρών strings (12΄)<span class="sr bookmark-icon-sr">&nbsp;</span></div>
+          </button>
+        </li>
+        <li role="presentation">
+          <button class="seq_problem inactive nav-item tab" role="tab" tabindex="-1" aria-selected="false" aria-expanded="false" aria-controls="seq_content" data-index="4" data-id="block-v1:ComputerScience+CS1.1+2017_T4+type@vertical+block@3b48a1928ca649cab82d56109fe6e53e" data-element="5" data-page-title="Q2.2" data-path="Εβδ. 1: Δεδομένα, Μεταβλητές και εκφράσεις &gt; 2: Συμβολοσειρές strings &gt; Q2.2" data-graded="False" id="tab_4">
+            <span class="icon fa seq_problem" aria-hidden="true"></span>
+              <span class="fa fa-check-circle check-circle is-hidden" style="color:green" aria-hidden="true"></span>
+            <span class="fa fa-fw fa-bookmark bookmark-icon is-hidden" aria-hidden="true"></span>
+            <div class="sequence-tooltip sr"><span class="sr">problem&nbsp;</span>Q2.2<span class="sr bookmark-icon-sr">&nbsp;</span></div>
+          </button>
+        </li>
+      </ol>
+    </nav>
+  </div>
+  <div class="sr-is-focusable" tabindex="-1"></div>
+
+  <div id="seq_contents_0" aria-labelledby="tab_0" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    
+&lt;div class="xblock xblock-student_view xblock-student_view-vertical" data-course-id="course-v1:ComputerScience+CS1.1+2017_T4" data-init="VerticalStudentView" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="vertical" data-usage-id="block-v1:ComputerScience+CS1.1+2017_T4+type@vertical+block@81cbfeffe81b47418e72e65615232df7" data-request-token="e7f61fccecb011eba913a5099b084e0f" data-graded="False" data-has-score="False"&gt;
+  
+
+
+
+
+
+  &lt;h2 class="hd hd-2 unit-title"&gt;Σημειώσεις&lt;/h2&gt;
+
+
+  
+
+
+
+&lt;div class="bookmark-button-wrapper"&gt;
+  &lt;button class="btn btn-link bookmark-button "
+    aria-pressed="false"
+    data-bookmark-id="pacos,block-v1:ComputerScience+CS1.1+2017_T4+type@vertical+block@81cbfeffe81b47418e72e65615232df7"
+    data-bookmarks-api-url="/api/bookmarks/v1/bookmarks/"&gt;
+     &lt;span class="bookmark-text"&gt;Προσθέστε σελιδοδείκτη σε αυτή τη σελίδα&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class="vert-mod"&gt;
+    &lt;div class="vert vert-0" data-id="block-v1:ComputerScience+CS1.1+2017_T4+type@html+block@90b91135631e4f85a884bb1e415de463"&gt;
+        
+&lt;div class="xblock xblock-student_view xblock-student_view-html xmodule_display xmodule_HtmlBlock" data-course-id="course-v1:ComputerScience+CS1.1+2017_T4" data-init="XBlockToXModuleShim" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="html" data-usage-id="block-v1:ComputerScience+CS1.1+2017_T4+type@html+block@90b91135631e4f85a884bb1e415de463" data-request-token="e7f61fccecb011eba913a5099b084e0f" data-graded="False" data-has-score="False"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;link rel="stylesheet" href="/assets/courseware/v1/db8ce58adfb1b685bd575fb9395d5ddb/asset-v1:ComputerScience+CS1.1+2017_T4+type@asset+block/default.css"&gt;
+&lt;script src="/assets/courseware/v1/01524555621f85f417dfcb390e2d3037/asset-v1:ComputerScience+CS1.1+2017_T4+type@asset+block/highlight.pack.js"&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+
+&lt;h1&gt;Συμβολοσειρές strings&lt;/h1&gt;
+&lt;h3&gt;Δημιουργία – δεικτοδότηση&lt;/h3&gt;
+&lt;table&gt;&lt;tr&gt;
+&lt;td style="border:0px;"&gt;&lt;pre&gt;&lt;code class="python"&gt;
+&gt;&gt;&gt; name = "Αγαμέμνων"
+&gt;&gt;&gt; name
+'Αγαμέμνων'
+&gt;&gt;&gt; name[0]
+'Α'
+&lt;/code&gt;
+&lt;/pre&gt;&lt;/td&gt;
+
+&lt;td style="border:0px;"&gt;&lt;img src="/assets/courseware/v1/7dae9bf8051670d0c3f91d5cddd78d0d/asset-v1:ComputerScience+CS1.1+2017_T4+type@asset+block/02_strings_a.svg"/&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Μια συμβολοσειρά είναι μια ακολουθία χαρακτήρων που
+περικλείεται από μονά ή διπλά εισαγωγικά&lt;/p&gt;
+&lt;pre&gt;&lt;code class="python"&gt;
+&gt;&gt;&gt; name = 'Αγαμέμνων'
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;h3&gt;Χαρακτήρες – κωδικοποίηση&lt;/h3&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td style="border:0px;"&gt;
+    &lt;pre&gt;&lt;code class="python"&gt;
+    &gt;&gt;&gt; ord("α")
+    945
+    &gt;&gt;&gt; ord("ά")
+    940
+    &gt;&gt;&gt; ord("\n")
+    10
+    &gt;&gt;&gt; ord(" ")
+    32
+    &lt;/code&gt;&lt;/pre&gt;
+    &lt;/td&gt;
+    &lt;td style="border:0px;"&gt;Οι χαρακτήρες αποθηκεύονται ως
+      ακέραιοι μήκους 1 έως 4 bytes. &lt;br/&gt;
+Η συνάρτηση ord(χαρακτήρας) μας
+      επιστρέφει τον κωδικό τους.&lt;br/&gt;
+H συνάρτηση chr(ακέραιος) μας λέει
+σε ποιον χαρακτήρα αντιστοιχεί ένας
+      κωδικός.&lt;br/&gt;
+Υπάρχουν μη εκτυπούμενοι
+χαρακτήρες "\n", "\t" κλπ.&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h3&gt;Τεμαχισμός συμβολοσειρών (slice)&lt;/h3&gt;
+&lt;img src="/assets/courseware/v1/dcb65de0cd1cfbe777be4278799f6abb/asset-v1:ComputerScience+CS1.1+2017_T4+type@asset+block/02_strings_b.svg"/&gt;
+&lt;pre&gt;&lt;code class="python"&gt;
+&gt;&gt;&gt; s = "κάτω στους πέρα "
+&gt;&gt;&gt; s[5:10]
+'στους'
+&gt;&gt;&gt; s[5:]
+'στους πέρα '
+&gt;&gt;&gt; s[:5]
+'κάτω '
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Τμήμα μιας συμβολοσειράς ορίζεται από το χαρακτήρα αρχής μέχρι
+τον χαρακτήρα τερματισμού χωρίς να περιλαμβάνεται ο τελευταίος&lt;/p&gt;
+
+&lt;h3&gt;Πράξεις με συμβολοσειρές&lt;/h3&gt;
+&lt;p&gt;Οι συμβολοσειρές είναι &lt;b&gt;αμετάβλητες&lt;/b&gt; ακολουθίες
+χαρακτήρων, δεν επιτρέπεται η αλλαγή τους.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="python"&gt;
+&gt;&gt;&gt; name = "nikos"
+&gt;&gt;&gt; name[0] = "N"
+Traceback (most recent call last):
+  File "&amp;lt;stdin&gt;", line 1, in &amp;lt;module&gt;
+TypeError: 'str' object does not support item assignment
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Επιτρέπεται όμως η πρόσθεση συμβολοσειρών &lt;b&gt;s1 + s2&lt;/b&gt;
+  και ο πολλαπλασιασμός συμβολοσειράς με ακέραιο &lt;b&gt;s * n&lt;/b&gt;&lt;/p&gt;
+
+
+
+&lt;h3&gt;Μήκος συμβολοσειράς&lt;/h3&gt;
+&lt;pre&gt;&lt;code class="python"&gt;
+&gt;&gt;&gt; s = "κάτω στους πέρα "
+&gt;&gt;&gt; len(s)
+16
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Η συνάρτηση len(s) μας δείνει το πλήθος χαρακτήρων της
+  συμβολοσειράς&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;u&gt;Ερώτηση:&lt;/u&gt;&lt;/b&gt; τι θα πάρουμε από την s[ len(s) ]&lt;/p&gt;
+&lt;h3&gt;Επανάληψη: πράξεις με συμβολοσειρές&lt;/h3&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;τελεστής&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;αποτέλεσμα&lt;/b&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td&gt;&amp;lt;seq&gt; + &amp;lt;seq&gt;&lt;/td&gt;
+    &lt;td&gt;συνένωση&lt;/td&gt;
+  &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td&gt;&amp;lt;seq&gt; * &amp;lt;int&gt;&lt;/td&gt;
+    &lt;td&gt;επανάληψη&lt;/td&gt;
+  &lt;/tr&gt;
+      &lt;tr&gt;
+    &lt;td&gt;&amp;lt;seq&gt;[]&lt;/td&gt;
+    &lt;td&gt;δείκτης&lt;/td&gt;
+  &lt;/tr&gt;
+        &lt;tr&gt;
+    &lt;td&gt;len(&amp;lt;seq&gt;)&lt;/td&gt;
+    &lt;td&gt;μήκος ακολουθίας&lt;/td&gt;
+  &lt;/tr&gt;
+        &lt;tr&gt;
+    &lt;td&gt;&amp;lt;seq&gt;[:]&lt;/td&gt;
+    &lt;td&gt;τεμαχισμός&lt;/td&gt;
+  &lt;/tr&gt;
+        &lt;tr&gt;
+    &lt;td&gt;for &amp;lt;var&gt; in &amp;lt;seq&gt;:&lt;/td&gt;
+    &lt;td&gt;επανάληψη&lt;/td&gt;
+  &lt;/tr&gt;
+        &lt;tr&gt;
+    &lt;td&gt;&amp;lt;expr&gt; in &amp;lt;seq&gt;&lt;/td&gt;
+    &lt;td&gt;συμμετοχή (Boolean)&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h3&gt;Μέθοδοι συμβολοσειρών&lt;/h3&gt;
+&lt;pre&gt;&lt;code class="python"&gt;
+&gt;&gt;&gt; s = "κάτω στους πέρα "
+&gt;&gt;&gt; s.split()
+['κάτω', 'στους', 'πέρα']
+&gt;&gt;&gt; s.upper()
+'ΚΆΤΩ ΣΤΟΥΣ ΠΈΡΑ '
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Υπάρχουν πολλές ακόμη μέθοδοι που εφαρμόζονται σε μια
+συμβολοσειρά s, για αναζήτηση, μετατροπή τους, εξαγωγή
+λέξεων από κείμενο, έλεγχο αν το κείμενο περιέχει αριθμούς
+ή γράμματα, κλπ.&lt;/p&gt;
+
+
+&lt;h3&gt;Κύριες μέθοδοι συμβολοσειρών&lt;/h3&gt;
+&lt;pre&gt;&lt;code class="python"&gt;
+s.count(str, beg= 0,end=len(string))
+s.decode(encoding='UTF-8',errors='strict')
+s.encode(encoding='UTF-8',errors='strict')
+s.endswith(suffix, beg=0, end =len(string))
+s.find(str, beg=0 end=len(string)) # -1 αν δεν βρεθεί
+s.isalpha()
+s.isdigit()
+s.islower()
+s.join(seq)
+s.format(param)
+s.replace(old, new [, max])
+s.split(str="", num=string.count(str))
+s.startswith(str, beg = 0, end = len(string))
+s.strip([chars])
+s.upper()
+s.lower()
+s.capitalize()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Ασκήσεις στις συμβολοσειρές&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;2.1&lt;/b&gt; Έστω name = "κατερίνα" . Να γράψετε τις κατάλληλες εντολές ώστε η
+  μεταβλητή να περιέχει το όνομα με αρχικό κεφαλαίο γράμμα&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;2.2&lt;/b&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class="python"&gt;stixos = "Μένω μονάχος στο παρόν μου"
+n = stixos[:5]+stixos[-9:-4]&lt;/code&gt;&lt;/pre&gt;
+  &lt;p&gt;Ποια η τιμή της μεταβλητής n;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;2.3&lt;/b&gt;
+  Να ορίσετε μια μεταβλητή τύπου str που περιέχει το εξής κείμενο:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="python"&gt;=========================
+   Αρχή Προγράμματος
+=========================&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href="/assets/courseware/v1/138d2618365a0cb453557492ce616d68/asset-v1:ComputerScience+CS1.1+2017_T4+type@asset+block/02_strings.pdf"&gt;Μάθημα 2 [PDF]&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+  
+  &lt;script type="text/javascript"&gt;
+    (function (require) {
+        require(['/static/js/dateutil_factory.be68acdff619.js?raw'], function () {
+          require(['js/dateutil_factory'], function (DateUtilFactory) {
+            
+    DateUtilFactory.transform('.localized-datetime');
+
+          });
+        });
+    }).call(this, require || RequireJS.require);
+  &lt;/script&gt;
+
+
+&lt;script&gt;
+    function emit_event(message) {
+        parent.postMessage(message, '*');
+    }
+&lt;/script&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_1" aria-labelledby="tab_1" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    
+&lt;div class="xblock xblock-student_view xblock-student_view-vertical" data-course-id="course-v1:ComputerScience+CS1.1+2017_T4" data-init="VerticalStudentView" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="vertical" data-usage-id="block-v1:ComputerScience+CS1.1+2017_T4+type@vertical+block@df0fafb1b2d84949bdbf04654aeabfb4" data-request-token="e7f61fccecb011eba913a5099b084e0f" data-graded="False" data-has-score="False"&gt;
+  
+
+
+
+
+
+  &lt;h2 class="hd hd-2 unit-title"&gt;V2.1 Συμβολοσειρές strings (12΄)&lt;/h2&gt;
+
+
+  
+
+
+
+&lt;div class="bookmark-button-wrapper"&gt;
+  &lt;button class="btn btn-link bookmark-button "
+    aria-pressed="false"
+    data-bookmark-id="pacos,block-v1:ComputerScience+CS1.1+2017_T4+type@vertical+block@df0fafb1b2d84949bdbf04654aeabfb4"
+    data-bookmarks-api-url="/api/bookmarks/v1/bookmarks/"&gt;
+     &lt;span class="bookmark-text"&gt;Προσθέστε σελιδοδείκτη σε αυτή τη σελίδα&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class="vert-mod"&gt;
+    &lt;div class="vert vert-0" data-id="block-v1:ComputerScience+CS1.1+2017_T4+type@html+block@a258bd5a5aae48c5add531bda1b5dba5"&gt;
+        
+&lt;div class="xblock xblock-student_view xblock-student_view-html xmodule_display xmodule_HtmlBlock" data-course-id="course-v1:ComputerScience+CS1.1+2017_T4" data-init="XBlockToXModuleShim" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="html" data-usage-id="block-v1:ComputerScience+CS1.1+2017_T4+type@html+block@a258bd5a5aae48c5add531bda1b5dba5" data-request-token="e7f61fccecb011eba913a5099b084e0f" data-graded="False" data-has-score="False"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  V2.1 Συμβολοσειρές strings (12΄)
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class="vert vert-1" data-id="block-v1:ComputerScience+CS1.1+2017_T4+type@video+block@1defeba7f2c845b39664d1935670c108"&gt;
+        
+&lt;div class="xblock xblock-student_view xblock-student_view-video xmodule_display xmodule_VideoBlock" data-course-id="course-v1:ComputerScience+CS1.1+2017_T4" data-init="XBlockToXModuleShim" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="video" data-usage-id="block-v1:ComputerScience+CS1.1+2017_T4+type@video+block@1defeba7f2c845b39664d1935670c108" data-request-token="e7f61fccecb011eba913a5099b084e0f" data-graded="False" data-has-score="False"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "Video"}
+  &lt;/script&gt;
+  
+
+
+    &lt;h3 class="hd hd-2"&gt;&lt;/h3&gt;
+
+&lt;div
+    id="video_1defeba7f2c845b39664d1935670c108"
+    class="video closed"
+    data-metadata='{&amp;#34;autoAdvance&amp;#34;: false, &amp;#34;autohideHtml5&amp;#34;: false, &amp;#34;autoplay&amp;#34;: false, &amp;#34;captionDataDir&amp;#34;: null, &amp;#34;completionEnabled&amp;#34;: false, &amp;#34;completionPercentage&amp;#34;: 5000, &amp;#34;duration&amp;#34;: null, &amp;#34;end&amp;#34;: 0.0, &amp;#34;generalSpeed&amp;#34;: 1.0, &amp;#34;lmsRootURL&amp;#34;: &amp;#34;https://mathesis.cup.gr&amp;#34;, &amp;#34;poster&amp;#34;: null, &amp;#34;prioritizeHls&amp;#34;: false, &amp;#34;publishCompletionUrl&amp;#34;: &amp;#34;/courses/course-v1:ComputerScience+CS1.1+2017_T4/xblock/block-v1:ComputerScience+CS1.1+2017_T4+type@video+block@1defeba7f2c845b39664d1935670c108/handler/publish_completion&amp;#34;, &amp;#34;recordedYoutubeIsAvailable&amp;#34;: true, &amp;#34;savedVideoPosition&amp;#34;: 0.0, &amp;#34;saveStateEnabled&amp;#34;: true, &amp;#34;saveStateUrl&amp;#34;: &amp;#34;/courses/course-v1:ComputerScience+CS1.1+2017_T4/xblock/block-v1:ComputerScience+CS1.1+2017_T4+type@video+block@1defeba7f2c845b39664d1935670c108/handler/xmodule_handler/save_user_state&amp;#34;, &amp;#34;showCaptions&amp;#34;: &amp;#34;true&amp;#34;, &amp;#34;sources&amp;#34;: [], &amp;#34;speed&amp;#34;: null, &amp;#34;start&amp;#34;: 0.0, &amp;#34;streams&amp;#34;: &amp;#34;1.00:cEgqMv11VwU&amp;#34;, &amp;#34;transcriptAvailableTranslationsUrl&amp;#34;: &amp;#34;/courses/course-v1:ComputerScience+CS1.1+2017_T4/xblock/block-v1:ComputerScience+CS1.1+2017_T4+type@video+block@1defeba7f2c845b39664d1935670c108/handler/transcript/available_translations&amp;#34;, &amp;#34;transcriptLanguage&amp;#34;: &amp;#34;en&amp;#34;, &amp;#34;transcriptLanguages&amp;#34;: {&amp;#34;en&amp;#34;: &amp;#34;English&amp;#34;}, &amp;#34;transcriptTranslationUrl&amp;#34;: &amp;#34;/courses/course-v1:ComputerScience+CS1.1+2017_T4/xblock/block-v1:ComputerScience+CS1.1+2017_T4+type@video+block@1defeba7f2c845b39664d1935670c108/handler/transcript/translation/__lang__&amp;#34;, &amp;#34;ytApiUrl&amp;#34;: &amp;#34;https://www.youtube.com/iframe_api&amp;#34;, &amp;#34;ytMetadataEndpoint&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;ytTestTimeout&amp;#34;: 1500}'
+    data-bumper-metadata='null'
+    data-autoadvance-enabled="False"
+    data-poster='null'
+    tabindex="-1"
+&gt;
+    &lt;div class="focus_grabber first"&gt;&lt;/div&gt;
+
+    &lt;div class="tc-wrapper"&gt;
+      &lt;div class="video-wrapper"&gt;
+          &lt;span tabindex="0" class="spinner" aria-hidden="false" aria-label="Loading video player"&gt;&lt;/span&gt;
+          &lt;span tabindex="-1" class="btn-play fa fa-youtube-play fa-2x is-hidden" aria-hidden="true" aria-label="Αναπαραγωγή βίντεο"&gt;&lt;/span&gt;
+          &lt;div class="video-player-pre"&gt;&lt;/div&gt;
+          &lt;div class="video-player"&gt;
+              &lt;div id="1defeba7f2c845b39664d1935670c108"&gt;&lt;/div&gt;
+              &lt;h4 class="hd hd-4 video-error is-hidden"&gt;No playable video sources found.&lt;/h4&gt;
+              &lt;h4 class="hd hd-4 video-hls-error is-hidden"&gt;
+                  Your browser does not support this video format. Try using a different browser.
+              &lt;/h4&gt;
+          &lt;/div&gt;
+          &lt;div class="video-player-post"&gt;&lt;/div&gt;
+          &lt;div class="closed-captions"&gt;&lt;/div&gt;
+          &lt;div class="video-controls is-hidden"&gt;
+              &lt;div&gt;
+                  &lt;div class="vcr"&gt;&lt;div class="vidtime"&gt;0:00 / 0:00&lt;/div&gt;&lt;/div&gt;
+                  &lt;div class="secondary-controls"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="focus_grabber last"&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+  
+  &lt;script type="text/javascript"&gt;
+    (function (require) {
+        require(['/static/js/dateutil_factory.be68acdff619.js?raw'], function () {
+          require(['js/dateutil_factory'], function (DateUtilFactory) {
+            
+    DateUtilFactory.transform('.localized-datetime');
+
+          });
+        });
+    }).call(this, require || RequireJS.require);
+  &lt;/script&gt;
+
+
+&lt;script&gt;
+    function emit_event(message) {
+        parent.postMessage(message, '*');
+    }
+&lt;/script&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_2" aria-labelledby="tab_2" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    
+&lt;div class="xblock xblock-student_view xblock-student_view-vertical" data-course-id="course-v1:ComputerScience+CS1.1+2017_T4" data-init="VerticalStudentView" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="vertical" data-usage-id="block-v1:ComputerScience+CS1.1+2017_T4+type@vertical+block@5cbb128eec6b46e2858aeef740442f9e" data-request-token="e7f61fccecb011eba913a5099b084e0f" data-graded="False" data-has-score="False"&gt;
+  
+
+
+
+
+
+  &lt;h2 class="hd hd-2 unit-title"&gt;Q2.1&lt;/h2&gt;
+
+
+  
+
+
+
+&lt;div class="bookmark-button-wrapper"&gt;
+  &lt;button class="btn btn-link bookmark-button "
+    aria-pressed="false"
+    data-bookmark-id="pacos,block-v1:ComputerScience+CS1.1+2017_T4+type@vertical+block@5cbb128eec6b46e2858aeef740442f9e"
+    data-bookmarks-api-url="/api/bookmarks/v1/bookmarks/"&gt;
+     &lt;span class="bookmark-text"&gt;Προσθέστε σελιδοδείκτη σε αυτή τη σελίδα&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class="vert-mod"&gt;
+    &lt;div class="vert vert-0" data-id="block-v1:ComputerScience+CS1.1+2017_T4+type@problem+block@4d004e5007de4ad7ba20aab28b0aa642"&gt;
+        
+&lt;div class="xblock xblock-student_view xblock-student_view-problem xmodule_display xmodule_ProblemBlock" data-course-id="course-v1:ComputerScience+CS1.1+2017_T4" data-init="XBlockToXModuleShim" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="problem" data-usage-id="block-v1:ComputerScience+CS1.1+2017_T4+type@problem+block@4d004e5007de4ad7ba20aab28b0aa642" data-request-token="e7f61fccecb011eba913a5099b084e0f" data-graded="False" data-has-score="True"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "Problem"}
+  &lt;/script&gt;
+  &lt;div id="problem_4d004e5007de4ad7ba20aab28b0aa642" class="problems-wrapper" role="group"
+     aria-labelledby="4d004e5007de4ad7ba20aab28b0aa642-problem-title"
+     data-problem-id="block-v1:ComputerScience+CS1.1+2017_T4+type@problem+block@4d004e5007de4ad7ba20aab28b0aa642" data-url="/courses/course-v1:ComputerScience+CS1.1+2017_T4/xblock/block-v1:ComputerScience+CS1.1+2017_T4+type@problem+block@4d004e5007de4ad7ba20aab28b0aa642/handler/xmodule_handler"
+     data-problem-score="0"
+     data-problem-total-possible="3"
+     data-attempts-used="0"
+     data-content="
+
+
+
+
+&amp;lt;h3 class=&amp;#34;hd hd-3 problem-header&amp;#34; id=&amp;#34;4d004e5007de4ad7ba20aab28b0aa642-problem-title&amp;#34; aria-describedby=&amp;#34;block-v1:ComputerScience+CS1.1+2017_T4+type@problem+block@4d004e5007de4ad7ba20aab28b0aa642-problem-progress&amp;#34; tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+  Q2.1
+&amp;lt;/h3&amp;gt;
+
+&amp;lt;div class=&amp;#34;problem-progress&amp;#34; id=&amp;#34;block-v1:ComputerScience+CS1.1+2017_T4+type@problem+block@4d004e5007de4ad7ba20aab28b0aa642-problem-progress&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&amp;#34;problem&amp;#34;&amp;gt;
+&amp;lt;!-- NG --&amp;gt;
+&amp;lt;div&amp;gt;
+  &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;1.&amp;lt;/b&amp;gt; &amp;amp;#928;&amp;amp;#959;&amp;amp;#953;&amp;amp;#959; &amp;amp;#964;&amp;amp;#959; &amp;amp;#945;&amp;amp;#960;&amp;amp;#959;&amp;amp;#964;&amp;amp;#941;&amp;amp;#955;&amp;amp;#949;&amp;amp;#963;&amp;amp;#956;&amp;amp;#945;;&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;chr (ord(&amp;#39;a&amp;#39;))&amp;lt;/pre&amp;gt;
+&amp;lt;div class=&amp;#34;wrapper-problem-response&amp;#34; tabindex=&amp;#34;-1&amp;#34; aria-label=&amp;#34;Question 1&amp;#34; role=&amp;#34;group&amp;#34;&amp;gt;&amp;lt;div class=&amp;#34;choicegroup capa_inputtype&amp;#34; id=&amp;#34;inputtype_4d004e5007de4ad7ba20aab28b0aa642_2_1&amp;#34;&amp;gt;
+    &amp;lt;fieldset aria-describedby=&amp;#34;status_4d004e5007de4ad7ba20aab28b0aa642_2_1&amp;#34;&amp;gt;
+          
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_2_1&amp;#34; id=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_2_1_choice_0&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_0&amp;#34;/&amp;gt;&amp;lt;label id=&amp;#34;4d004e5007de4ad7ba20aab28b0aa642_2_1-choice_0-label&amp;#34; for=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_2_1_choice_0&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_4d004e5007de4ad7ba20aab28b0aa642_2_1&amp;#34;&amp;gt; &amp;#39;a&amp;#39;
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_2_1&amp;#34; id=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_2_1_choice_1&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_1&amp;#34;/&amp;gt;&amp;lt;label id=&amp;#34;4d004e5007de4ad7ba20aab28b0aa642_2_1-choice_1-label&amp;#34; for=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_2_1_choice_1&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_4d004e5007de4ad7ba20aab28b0aa642_2_1&amp;#34;&amp;gt; 97
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_2_1&amp;#34; id=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_2_1_choice_2&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_2&amp;#34;/&amp;gt;&amp;lt;label id=&amp;#34;4d004e5007de4ad7ba20aab28b0aa642_2_1-choice_2-label&amp;#34; for=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_2_1_choice_2&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_4d004e5007de4ad7ba20aab28b0aa642_2_1&amp;#34;&amp;gt; TypeError
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_2_1&amp;#34; id=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_2_1_choice_3&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_3&amp;#34;/&amp;gt;&amp;lt;label id=&amp;#34;4d004e5007de4ad7ba20aab28b0aa642_2_1-choice_3-label&amp;#34; for=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_2_1_choice_3&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_4d004e5007de4ad7ba20aab28b0aa642_2_1&amp;#34;&amp;gt; 940
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+        &amp;lt;span id=&amp;#34;answer_4d004e5007de4ad7ba20aab28b0aa642_2_1&amp;#34;/&amp;gt;
+    &amp;lt;/fieldset&amp;gt;
+    &amp;lt;div class=&amp;#34;indicator-container&amp;#34;&amp;gt;
+          
+
+&amp;lt;span class=&amp;#34;status unanswered&amp;#34; id=&amp;#34;status_4d004e5007de4ad7ba20aab28b0aa642_2_1&amp;#34; data-tooltip=&amp;#34;Not yet answered.&amp;#34;&amp;gt;
+  &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;&amp;amp;#945;&amp;amp;#957;&amp;amp;#945;&amp;amp;#960;&amp;amp;#940;&amp;amp;#957;&amp;amp;#964;&amp;amp;#951;&amp;amp;#964;&amp;amp;#959;&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;#34;status-icon&amp;#34; aria-hidden=&amp;#34;true&amp;#34;/&amp;gt;
+&amp;lt;/span&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+
+  &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;2.&amp;lt;/b&amp;gt; &amp;amp;#928;&amp;amp;#959;&amp;amp;#953;&amp;amp;#959; &amp;amp;#964;&amp;amp;#959; &amp;amp;#945;&amp;amp;#960;&amp;amp;#959;&amp;amp;#964;&amp;amp;#941;&amp;amp;#955;&amp;amp;#949;&amp;amp;#963;&amp;amp;#956;&amp;amp;#945;:&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;s = &amp;#39;123456&amp;#39;
+print(s[len(s)])&amp;lt;/pre&amp;gt;
+&amp;lt;div class=&amp;#34;wrapper-problem-response&amp;#34; tabindex=&amp;#34;-1&amp;#34; aria-label=&amp;#34;Question 2&amp;#34; role=&amp;#34;group&amp;#34;&amp;gt;&amp;lt;div class=&amp;#34;choicegroup capa_inputtype&amp;#34; id=&amp;#34;inputtype_4d004e5007de4ad7ba20aab28b0aa642_3_1&amp;#34;&amp;gt;
+    &amp;lt;fieldset aria-describedby=&amp;#34;status_4d004e5007de4ad7ba20aab28b0aa642_3_1&amp;#34;&amp;gt;
+          
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_3_1&amp;#34; id=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_3_1_choice_0&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_0&amp;#34;/&amp;gt;&amp;lt;label id=&amp;#34;4d004e5007de4ad7ba20aab28b0aa642_3_1-choice_0-label&amp;#34; for=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_3_1_choice_0&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_4d004e5007de4ad7ba20aab28b0aa642_3_1&amp;#34;&amp;gt; &amp;#39;6&amp;#39;
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_3_1&amp;#34; id=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_3_1_choice_1&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_1&amp;#34;/&amp;gt;&amp;lt;label id=&amp;#34;4d004e5007de4ad7ba20aab28b0aa642_3_1-choice_1-label&amp;#34; for=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_3_1_choice_1&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_4d004e5007de4ad7ba20aab28b0aa642_3_1&amp;#34;&amp;gt; &amp;#39;123456&amp;#39;
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_3_1&amp;#34; id=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_3_1_choice_2&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_2&amp;#34;/&amp;gt;&amp;lt;label id=&amp;#34;4d004e5007de4ad7ba20aab28b0aa642_3_1-choice_2-label&amp;#34; for=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_3_1_choice_2&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_4d004e5007de4ad7ba20aab28b0aa642_3_1&amp;#34;&amp;gt; 5
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_3_1&amp;#34; id=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_3_1_choice_3&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_3&amp;#34;/&amp;gt;&amp;lt;label id=&amp;#34;4d004e5007de4ad7ba20aab28b0aa642_3_1-choice_3-label&amp;#34; for=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_3_1_choice_3&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_4d004e5007de4ad7ba20aab28b0aa642_3_1&amp;#34;&amp;gt; IndexError
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+        &amp;lt;span id=&amp;#34;answer_4d004e5007de4ad7ba20aab28b0aa642_3_1&amp;#34;/&amp;gt;
+    &amp;lt;/fieldset&amp;gt;
+    &amp;lt;div class=&amp;#34;indicator-container&amp;#34;&amp;gt;
+          
+
+&amp;lt;span class=&amp;#34;status unanswered&amp;#34; id=&amp;#34;status_4d004e5007de4ad7ba20aab28b0aa642_3_1&amp;#34; data-tooltip=&amp;#34;Not yet answered.&amp;#34;&amp;gt;
+  &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;&amp;amp;#945;&amp;amp;#957;&amp;amp;#945;&amp;amp;#960;&amp;amp;#940;&amp;amp;#957;&amp;amp;#964;&amp;amp;#951;&amp;amp;#964;&amp;amp;#959;&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;#34;status-icon&amp;#34; aria-hidden=&amp;#34;true&amp;#34;/&amp;gt;
+&amp;lt;/span&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+
+  &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;3.&amp;lt;/b&amp;gt; &amp;amp;#932;&amp;amp;#953; &amp;amp;#952;&amp;amp;#945; &amp;amp;#964;&amp;amp;#965;&amp;amp;#960;&amp;amp;#974;&amp;amp;#963;&amp;amp;#949;&amp;amp;#953; &amp;amp;#964;&amp;amp;#959; &amp;amp;#960;&amp;amp;#945;&amp;amp;#961;&amp;amp;#945;&amp;amp;#954;&amp;amp;#940;&amp;amp;#964;&amp;amp;#969; &amp;amp;#960;&amp;amp;#961;&amp;amp;#972;&amp;amp;#947;&amp;amp;#961;&amp;amp;#945;&amp;amp;#956;&amp;amp;#956;&amp;amp;#945;;&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;s = &amp;#39;&amp;amp;#954;&amp;amp;#945;&amp;amp;#955;&amp;amp;#942;&amp;amp;#957; &amp;amp;#949;&amp;amp;#963;&amp;amp;#960;&amp;amp;#941;&amp;amp;#961;&amp;amp;#945; &amp;amp;#940;&amp;amp;#961;&amp;amp;#967;&amp;amp;#959;&amp;amp;#957;&amp;amp;#964;&amp;amp;#949;&amp;amp;#962;&amp;#39;
+print(s[-8:]+s[:5])&amp;lt;/pre&amp;gt;
+
+&amp;lt;div class=&amp;#34;wrapper-problem-response&amp;#34; tabindex=&amp;#34;-1&amp;#34; aria-label=&amp;#34;Question 3&amp;#34; role=&amp;#34;group&amp;#34;&amp;gt;&amp;lt;div id=&amp;#34;inputtype_4d004e5007de4ad7ba20aab28b0aa642_4_1&amp;#34; class=&amp;#34; capa_inputtype  textline&amp;#34;&amp;gt;
+
+    &amp;lt;div class=&amp;#34;unanswered &amp;#34;&amp;gt;
+
+
+
+&amp;lt;input type=&amp;#34;text&amp;#34; name=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_4_1&amp;#34; id=&amp;#34;input_4d004e5007de4ad7ba20aab28b0aa642_4_1&amp;#34; aria-describedby=&amp;#34;status_4d004e5007de4ad7ba20aab28b0aa642_4_1&amp;#34; value=&amp;#34;&amp;#34; size=&amp;#34;20&amp;#34;/&amp;gt;
+&amp;lt;span class=&amp;#34;trailing_text&amp;#34; id=&amp;#34;trailing_text_4d004e5007de4ad7ba20aab28b0aa642_4_1&amp;#34;/&amp;gt;
+
+
+
+&amp;lt;span class=&amp;#34;status unanswered&amp;#34; id=&amp;#34;status_4d004e5007de4ad7ba20aab28b0aa642_4_1&amp;#34; data-tooltip=&amp;#34;Not yet answered.&amp;#34;&amp;gt;
+  &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;&amp;amp;#945;&amp;amp;#957;&amp;amp;#945;&amp;amp;#960;&amp;amp;#940;&amp;amp;#957;&amp;amp;#964;&amp;amp;#951;&amp;amp;#964;&amp;amp;#959;&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;#34;status-icon&amp;#34; aria-hidden=&amp;#34;true&amp;#34;/&amp;gt;
+&amp;lt;/span&amp;gt;
+
+
+&amp;lt;p id=&amp;#34;answer_4d004e5007de4ad7ba20aab28b0aa642_4_1&amp;#34; class=&amp;#34;answer&amp;#34;/&amp;gt;
+
+
+    &amp;lt;/div&amp;gt;
+
+
+&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+
+
+&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;#34;action&amp;#34;&amp;gt;
+    &amp;lt;input type=&amp;#34;hidden&amp;#34; name=&amp;#34;problem_id&amp;#34; value=&amp;#34;Q2.1&amp;#34; /&amp;gt;
+    &amp;lt;div class=&amp;#34;submit-attempt-container&amp;#34;&amp;gt;
+      &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;submit btn-brand&amp;#34; data-submitting=&amp;#34;Υποβάλλεται&amp;#34; data-value=&amp;#34;Υποβολή&amp;#34; data-should-enable-submit-button=&amp;#34;True&amp;#34; aria-describedby=&amp;#34;submission_feedback_4d004e5007de4ad7ba20aab28b0aa642&amp;#34; &amp;gt;
+          &amp;lt;span class=&amp;#34;submit-label&amp;#34;&amp;gt;Υποβολή&amp;lt;/span&amp;gt;
+      &amp;lt;/button&amp;gt;
+      &amp;lt;div class=&amp;#34;submission-feedback&amp;#34; id=&amp;#34;submission_feedback_4d004e5007de4ad7ba20aab28b0aa642&amp;#34;&amp;gt;
+          Έχετε χρησιμοποιήσει 0 από 2 υποβολές
+        &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;Σε κάποιες ασκήσεις έχετε την επιλογή της αποθήκευσης, της επαναφοράς, της βοήθειας ή της προβολής των απαντήσεων. Οι επιλογές αυτές βρίσκονται κάτω από το κουμπί της Υποβολής.&amp;lt;/span&amp;gt;
+      &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;#34;problem-action-buttons-wrapper&amp;#34;&amp;gt;
+      &amp;lt;span class=&amp;#34;problem-action-button-wrapper&amp;#34;&amp;gt;
+          &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;save problem-action-btn btn-default btn-small&amp;#34; data-value=&amp;#34;Αποθήκευση&amp;#34;&amp;gt;
+              &amp;lt;span class=&amp;#34;icon fa fa-floppy-o&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+              &amp;lt;span aria-hidden=&amp;#34;true&amp;#34;&amp;gt;Αποθήκευση&amp;lt;/span&amp;gt;
+              &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;Save your answer&amp;lt;/span&amp;gt;
+          &amp;lt;/button&amp;gt;
+      &amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+    
+
+
+&amp;lt;div class=&amp;#34;notification warning notification-gentle-alert
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-exclamation-circle&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;4d004e5007de4ad7ba20aab28b0aa642-problem-title&amp;#34;&amp;gt;
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+    
+
+
+&amp;lt;div class=&amp;#34;notification warning notification-save
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-save&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;4d004e5007de4ad7ba20aab28b0aa642-problem-title&amp;#34;&amp;gt;None
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+    
+    
+
+
+&amp;lt;div class=&amp;#34;notification general notification-show-answer
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-info-circle&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;4d004e5007de4ad7ba20aab28b0aa642-problem-title&amp;#34;&amp;gt;Η σωστή απάντηση ή απαντήσεις φέρουν την κατάλληλη ένδειξη στις ερωτήσεις πολλαπλής επιλογής και παρατίθενται ολογράφως στις ερωτήσεις αντιστοίχισης και συμπλήρωσης.
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt;
+"
+     data-graded="False"&gt;
+    &lt;p class="loading-spinner"&gt;
+        &lt;i class="fa fa-spinner fa-pulse fa-2x fa-fw"&gt;&lt;/i&gt;
+        &lt;span class="sr"&gt;Loading&amp;hellip;&lt;/span&gt;
+    &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+  
+  &lt;script type="text/javascript"&gt;
+    (function (require) {
+        require(['/static/js/dateutil_factory.be68acdff619.js?raw'], function () {
+          require(['js/dateutil_factory'], function (DateUtilFactory) {
+            
+    DateUtilFactory.transform('.localized-datetime');
+
+          });
+        });
+    }).call(this, require || RequireJS.require);
+  &lt;/script&gt;
+
+
+&lt;script&gt;
+    function emit_event(message) {
+        parent.postMessage(message, '*');
+    }
+&lt;/script&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_3" aria-labelledby="tab_3" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    
+&lt;div class="xblock xblock-student_view xblock-student_view-vertical" data-course-id="course-v1:ComputerScience+CS1.1+2017_T4" data-init="VerticalStudentView" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="vertical" data-usage-id="block-v1:ComputerScience+CS1.1+2017_T4+type@vertical+block@3cd2271b429b4c8281a7ccfa37dff973" data-request-token="e7f61fccecb011eba913a5099b084e0f" data-graded="False" data-has-score="False"&gt;
+  
+
+
+
+
+
+  &lt;h2 class="hd hd-2 unit-title"&gt;V2.2 Πράξεις – μέθοδοι συμβολοσειρών strings (12΄)&lt;/h2&gt;
+
+
+  
+
+
+
+&lt;div class="bookmark-button-wrapper"&gt;
+  &lt;button class="btn btn-link bookmark-button "
+    aria-pressed="false"
+    data-bookmark-id="pacos,block-v1:ComputerScience+CS1.1+2017_T4+type@vertical+block@3cd2271b429b4c8281a7ccfa37dff973"
+    data-bookmarks-api-url="/api/bookmarks/v1/bookmarks/"&gt;
+     &lt;span class="bookmark-text"&gt;Προσθέστε σελιδοδείκτη σε αυτή τη σελίδα&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class="vert-mod"&gt;
+    &lt;div class="vert vert-0" data-id="block-v1:ComputerScience+CS1.1+2017_T4+type@html+block@de46d378473b44699e1efe87c6c68e9d"&gt;
+        
+&lt;div class="xblock xblock-student_view xblock-student_view-html xmodule_display xmodule_HtmlBlock" data-course-id="course-v1:ComputerScience+CS1.1+2017_T4" data-init="XBlockToXModuleShim" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="html" data-usage-id="block-v1:ComputerScience+CS1.1+2017_T4+type@html+block@de46d378473b44699e1efe87c6c68e9d" data-request-token="e7f61fccecb011eba913a5099b084e0f" data-graded="False" data-has-score="False"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  V2.2 Πράξεις – μέθοδοι συμβολοσειρών strings (12΄)
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class="vert vert-1" data-id="block-v1:ComputerScience+CS1.1+2017_T4+type@video+block@71daef30ce6f4ae4af7d9ecad2b1a51a"&gt;
+        
+&lt;div class="xblock xblock-student_view xblock-student_view-video xmodule_display xmodule_VideoBlock" data-course-id="course-v1:ComputerScience+CS1.1+2017_T4" data-init="XBlockToXModuleShim" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="video" data-usage-id="block-v1:ComputerScience+CS1.1+2017_T4+type@video+block@71daef30ce6f4ae4af7d9ecad2b1a51a" data-request-token="e7f61fccecb011eba913a5099b084e0f" data-graded="False" data-has-score="False"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "Video"}
+  &lt;/script&gt;
+  
+
+
+    &lt;h3 class="hd hd-2"&gt;&lt;/h3&gt;
+
+&lt;div
+    id="video_71daef30ce6f4ae4af7d9ecad2b1a51a"
+    class="video closed"
+    data-metadata='{&amp;#34;autoAdvance&amp;#34;: false, &amp;#34;autohideHtml5&amp;#34;: false, &amp;#34;autoplay&amp;#34;: false, &amp;#34;captionDataDir&amp;#34;: null, &amp;#34;completionEnabled&amp;#34;: false, &amp;#34;completionPercentage&amp;#34;: 5000, &amp;#34;duration&amp;#34;: null, &amp;#34;end&amp;#34;: 0.0, &amp;#34;generalSpeed&amp;#34;: 1.0, &amp;#34;lmsRootURL&amp;#34;: &amp;#34;https://mathesis.cup.gr&amp;#34;, &amp;#34;poster&amp;#34;: null, &amp;#34;prioritizeHls&amp;#34;: false, &amp;#34;publishCompletionUrl&amp;#34;: &amp;#34;/courses/course-v1:ComputerScience+CS1.1+2017_T4/xblock/block-v1:ComputerScience+CS1.1+2017_T4+type@video+block@71daef30ce6f4ae4af7d9ecad2b1a51a/handler/publish_completion&amp;#34;, &amp;#34;recordedYoutubeIsAvailable&amp;#34;: true, &amp;#34;savedVideoPosition&amp;#34;: 0.0, &amp;#34;saveStateEnabled&amp;#34;: true, &amp;#34;saveStateUrl&amp;#34;: &amp;#34;/courses/course-v1:ComputerScience+CS1.1+2017_T4/xblock/block-v1:ComputerScience+CS1.1+2017_T4+type@video+block@71daef30ce6f4ae4af7d9ecad2b1a51a/handler/xmodule_handler/save_user_state&amp;#34;, &amp;#34;showCaptions&amp;#34;: &amp;#34;true&amp;#34;, &amp;#34;sources&amp;#34;: [], &amp;#34;speed&amp;#34;: null, &amp;#34;start&amp;#34;: 0.0, &amp;#34;streams&amp;#34;: &amp;#34;1.00:We4NedXpfi0&amp;#34;, &amp;#34;transcriptAvailableTranslationsUrl&amp;#34;: &amp;#34;/courses/course-v1:ComputerScience+CS1.1+2017_T4/xblock/block-v1:ComputerScience+CS1.1+2017_T4+type@video+block@71daef30ce6f4ae4af7d9ecad2b1a51a/handler/transcript/available_translations&amp;#34;, &amp;#34;transcriptLanguage&amp;#34;: &amp;#34;en&amp;#34;, &amp;#34;transcriptLanguages&amp;#34;: {&amp;#34;en&amp;#34;: &amp;#34;English&amp;#34;}, &amp;#34;transcriptTranslationUrl&amp;#34;: &amp;#34;/courses/course-v1:ComputerScience+CS1.1+2017_T4/xblock/block-v1:ComputerScience+CS1.1+2017_T4+type@video+block@71daef30ce6f4ae4af7d9ecad2b1a51a/handler/transcript/translation/__lang__&amp;#34;, &amp;#34;ytApiUrl&amp;#34;: &amp;#34;https://www.youtube.com/iframe_api&amp;#34;, &amp;#34;ytMetadataEndpoint&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;ytTestTimeout&amp;#34;: 1500}'
+    data-bumper-metadata='null'
+    data-autoadvance-enabled="False"
+    data-poster='null'
+    tabindex="-1"
+&gt;
+    &lt;div class="focus_grabber first"&gt;&lt;/div&gt;
+
+    &lt;div class="tc-wrapper"&gt;
+      &lt;div class="video-wrapper"&gt;
+          &lt;span tabindex="0" class="spinner" aria-hidden="false" aria-label="Loading video player"&gt;&lt;/span&gt;
+          &lt;span tabindex="-1" class="btn-play fa fa-youtube-play fa-2x is-hidden" aria-hidden="true" aria-label="Αναπαραγωγή βίντεο"&gt;&lt;/span&gt;
+          &lt;div class="video-player-pre"&gt;&lt;/div&gt;
+          &lt;div class="video-player"&gt;
+              &lt;div id="71daef30ce6f4ae4af7d9ecad2b1a51a"&gt;&lt;/div&gt;
+              &lt;h4 class="hd hd-4 video-error is-hidden"&gt;No playable video sources found.&lt;/h4&gt;
+              &lt;h4 class="hd hd-4 video-hls-error is-hidden"&gt;
+                  Your browser does not support this video format. Try using a different browser.
+              &lt;/h4&gt;
+          &lt;/div&gt;
+          &lt;div class="video-player-post"&gt;&lt;/div&gt;
+          &lt;div class="closed-captions"&gt;&lt;/div&gt;
+          &lt;div class="video-controls is-hidden"&gt;
+              &lt;div&gt;
+                  &lt;div class="vcr"&gt;&lt;div class="vidtime"&gt;0:00 / 0:00&lt;/div&gt;&lt;/div&gt;
+                  &lt;div class="secondary-controls"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="focus_grabber last"&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class="vert vert-2" data-id="block-v1:ComputerScience+CS1.1+2017_T4+type@html+block@59fd1f5b89e440348e3a25ac0cf941b6"&gt;
+        
+&lt;div class="xblock xblock-student_view xblock-student_view-html xmodule_display xmodule_HtmlBlock" data-course-id="course-v1:ComputerScience+CS1.1+2017_T4" data-init="XBlockToXModuleShim" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="html" data-usage-id="block-v1:ComputerScience+CS1.1+2017_T4+type@html+block@59fd1f5b89e440348e3a25ac0cf941b6" data-request-token="e7f61fccecb011eba913a5099b084e0f" data-graded="False" data-has-score="False"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "HTMLModule"}
+  &lt;/script&gt;
+  &lt;pre class="pycode"&gt;
+# Μάθημα 2. strings
+
+#Άσκηση 2.1
+name = "κατερίνα"
+name = name[0].upper() + name[1:]
+print(name)
+
+#Άσκηση 2.2
+stixos = "Μένω μονάχος στο παρόν μου"
+n = stixos[:5]+stixos[-9:-4]
+print(n)
+
+#Άσκηση 2.3
+st = 24*"="+"\n"+4*"  "+"Αρχή Προγράμματος\n"+ 24*"="
+print(st)
+
+&lt;/pre&gt;
+
+&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+  
+  &lt;script type="text/javascript"&gt;
+    (function (require) {
+        require(['/static/js/dateutil_factory.be68acdff619.js?raw'], function () {
+          require(['js/dateutil_factory'], function (DateUtilFactory) {
+            
+    DateUtilFactory.transform('.localized-datetime');
+
+          });
+        });
+    }).call(this, require || RequireJS.require);
+  &lt;/script&gt;
+
+
+&lt;script&gt;
+    function emit_event(message) {
+        parent.postMessage(message, '*');
+    }
+&lt;/script&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_4" aria-labelledby="tab_4" aria-hidden="true" class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    
+&lt;div class="xblock xblock-student_view xblock-student_view-vertical" data-course-id="course-v1:ComputerScience+CS1.1+2017_T4" data-init="VerticalStudentView" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="vertical" data-usage-id="block-v1:ComputerScience+CS1.1+2017_T4+type@vertical+block@3b48a1928ca649cab82d56109fe6e53e" data-request-token="e7f61fccecb011eba913a5099b084e0f" data-graded="False" data-has-score="False"&gt;
+  
+
+
+
+
+
+  &lt;h2 class="hd hd-2 unit-title"&gt;Q2.2&lt;/h2&gt;
+
+
+  
+
+
+
+&lt;div class="bookmark-button-wrapper"&gt;
+  &lt;button class="btn btn-link bookmark-button "
+    aria-pressed="false"
+    data-bookmark-id="pacos,block-v1:ComputerScience+CS1.1+2017_T4+type@vertical+block@3b48a1928ca649cab82d56109fe6e53e"
+    data-bookmarks-api-url="/api/bookmarks/v1/bookmarks/"&gt;
+     &lt;span class="bookmark-text"&gt;Προσθέστε σελιδοδείκτη σε αυτή τη σελίδα&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+
+&lt;div class="vert-mod"&gt;
+    &lt;div class="vert vert-0" data-id="block-v1:ComputerScience+CS1.1+2017_T4+type@problem+block@e039f5c4bfa04b9da0c62e11b5eeab4a"&gt;
+        
+&lt;div class="xblock xblock-student_view xblock-student_view-problem xmodule_display xmodule_ProblemBlock" data-course-id="course-v1:ComputerScience+CS1.1+2017_T4" data-init="XBlockToXModuleShim" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="problem" data-usage-id="block-v1:ComputerScience+CS1.1+2017_T4+type@problem+block@e039f5c4bfa04b9da0c62e11b5eeab4a" data-request-token="e7f61fccecb011eba913a5099b084e0f" data-graded="False" data-has-score="True"&gt;
+  &lt;script type="json/xblock-args" class="xblock-json-init-args"&gt;
+    {"xmodule-type": "Problem"}
+  &lt;/script&gt;
+  &lt;div id="problem_e039f5c4bfa04b9da0c62e11b5eeab4a" class="problems-wrapper" role="group"
+     aria-labelledby="e039f5c4bfa04b9da0c62e11b5eeab4a-problem-title"
+     data-problem-id="block-v1:ComputerScience+CS1.1+2017_T4+type@problem+block@e039f5c4bfa04b9da0c62e11b5eeab4a" data-url="/courses/course-v1:ComputerScience+CS1.1+2017_T4/xblock/block-v1:ComputerScience+CS1.1+2017_T4+type@problem+block@e039f5c4bfa04b9da0c62e11b5eeab4a/handler/xmodule_handler"
+     data-problem-score="0"
+     data-problem-total-possible="3"
+     data-attempts-used="0"
+     data-content="
+
+
+
+
+&amp;lt;h3 class=&amp;#34;hd hd-3 problem-header&amp;#34; id=&amp;#34;e039f5c4bfa04b9da0c62e11b5eeab4a-problem-title&amp;#34; aria-describedby=&amp;#34;block-v1:ComputerScience+CS1.1+2017_T4+type@problem+block@e039f5c4bfa04b9da0c62e11b5eeab4a-problem-progress&amp;#34; tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+  Q2.2
+&amp;lt;/h3&amp;gt;
+
+&amp;lt;div class=&amp;#34;problem-progress&amp;#34; id=&amp;#34;block-v1:ComputerScience+CS1.1+2017_T4+type@problem+block@e039f5c4bfa04b9da0c62e11b5eeab4a-problem-progress&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&amp;#34;problem&amp;#34;&amp;gt;
+&amp;lt;!-- NG --&amp;gt;
+&amp;lt;div&amp;gt;
+  &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;1.&amp;lt;/b&amp;gt; &amp;amp;#928;&amp;amp;#959;&amp;amp;#953;&amp;amp;#959; &amp;amp;#964;&amp;amp;#959; &amp;amp;#945;&amp;amp;#960;&amp;amp;#959;&amp;amp;#964;&amp;amp;#941;&amp;amp;#955;&amp;amp;#949;&amp;amp;#963;&amp;amp;#956;&amp;amp;#945;:&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;
+&amp;amp;gt;&amp;amp;gt;&amp;amp;gt; s = &amp;#39;&amp;amp;#954;&amp;amp;#945;&amp;amp;#964;&amp;amp;#969; &amp;#39;
+&amp;amp;gt;&amp;amp;gt;&amp;amp;gt; len(s.strip())&amp;lt;/pre&amp;gt;
+&amp;lt;div class=&amp;#34;wrapper-problem-response&amp;#34; tabindex=&amp;#34;-1&amp;#34; aria-label=&amp;#34;Question 1&amp;#34; role=&amp;#34;group&amp;#34;&amp;gt;&amp;lt;div id=&amp;#34;inputtype_e039f5c4bfa04b9da0c62e11b5eeab4a_2_1&amp;#34; class=&amp;#34; capa_inputtype  textline&amp;#34;&amp;gt;
+
+    &amp;lt;div class=&amp;#34;unanswered &amp;#34;&amp;gt;
+
+
+
+&amp;lt;input type=&amp;#34;text&amp;#34; name=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_2_1&amp;#34; id=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_2_1&amp;#34; aria-describedby=&amp;#34;status_e039f5c4bfa04b9da0c62e11b5eeab4a_2_1&amp;#34; value=&amp;#34;&amp;#34; size=&amp;#34;20&amp;#34;/&amp;gt;
+&amp;lt;span class=&amp;#34;trailing_text&amp;#34; id=&amp;#34;trailing_text_e039f5c4bfa04b9da0c62e11b5eeab4a_2_1&amp;#34;/&amp;gt;
+
+
+
+&amp;lt;span class=&amp;#34;status unanswered&amp;#34; id=&amp;#34;status_e039f5c4bfa04b9da0c62e11b5eeab4a_2_1&amp;#34; data-tooltip=&amp;#34;Not yet answered.&amp;#34;&amp;gt;
+  &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;&amp;amp;#945;&amp;amp;#957;&amp;amp;#945;&amp;amp;#960;&amp;amp;#940;&amp;amp;#957;&amp;amp;#964;&amp;amp;#951;&amp;amp;#964;&amp;amp;#959;&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;#34;status-icon&amp;#34; aria-hidden=&amp;#34;true&amp;#34;/&amp;gt;
+&amp;lt;/span&amp;gt;
+
+
+&amp;lt;p id=&amp;#34;answer_e039f5c4bfa04b9da0c62e11b5eeab4a_2_1&amp;#34; class=&amp;#34;answer&amp;#34;/&amp;gt;
+
+
+    &amp;lt;/div&amp;gt;
+
+
+&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+
+  &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;2.&amp;lt;/b&amp;gt; &amp;amp;#928;&amp;amp;#959;&amp;amp;#953;&amp;amp;#959; &amp;amp;#964;&amp;amp;#959; &amp;amp;#945;&amp;amp;#960;&amp;amp;#959;&amp;amp;#964;&amp;amp;#941;&amp;amp;#955;&amp;amp;#949;&amp;amp;#963;&amp;amp;#956;&amp;amp;#945;:&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;amp;gt;&amp;amp;gt;&amp;amp;gt; s = &amp;#39;&amp;amp;#925;&amp;amp;#945;&amp;amp;#953;&amp;#39;
+&amp;amp;gt;&amp;amp;gt;&amp;amp;gt; s.upper()&amp;lt;/pre&amp;gt;
+&amp;lt;div class=&amp;#34;wrapper-problem-response&amp;#34; tabindex=&amp;#34;-1&amp;#34; aria-label=&amp;#34;Question 2&amp;#34; role=&amp;#34;group&amp;#34;&amp;gt;&amp;lt;div id=&amp;#34;inputtype_e039f5c4bfa04b9da0c62e11b5eeab4a_3_1&amp;#34; class=&amp;#34; capa_inputtype  textline&amp;#34;&amp;gt;
+
+    &amp;lt;div class=&amp;#34;unanswered &amp;#34;&amp;gt;
+
+
+
+&amp;lt;input type=&amp;#34;text&amp;#34; name=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_3_1&amp;#34; id=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_3_1&amp;#34; aria-describedby=&amp;#34;status_e039f5c4bfa04b9da0c62e11b5eeab4a_3_1&amp;#34; value=&amp;#34;&amp;#34; size=&amp;#34;20&amp;#34;/&amp;gt;
+&amp;lt;span class=&amp;#34;trailing_text&amp;#34; id=&amp;#34;trailing_text_e039f5c4bfa04b9da0c62e11b5eeab4a_3_1&amp;#34;/&amp;gt;
+
+
+
+&amp;lt;span class=&amp;#34;status unanswered&amp;#34; id=&amp;#34;status_e039f5c4bfa04b9da0c62e11b5eeab4a_3_1&amp;#34; data-tooltip=&amp;#34;Not yet answered.&amp;#34;&amp;gt;
+  &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;&amp;amp;#945;&amp;amp;#957;&amp;amp;#945;&amp;amp;#960;&amp;amp;#940;&amp;amp;#957;&amp;amp;#964;&amp;amp;#951;&amp;amp;#964;&amp;amp;#959;&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;#34;status-icon&amp;#34; aria-hidden=&amp;#34;true&amp;#34;/&amp;gt;
+&amp;lt;/span&amp;gt;
+
+
+&amp;lt;p id=&amp;#34;answer_e039f5c4bfa04b9da0c62e11b5eeab4a_3_1&amp;#34; class=&amp;#34;answer&amp;#34;/&amp;gt;
+
+
+    &amp;lt;/div&amp;gt;
+
+
+&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+
+
+  &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;3.&amp;lt;/b&amp;gt; &amp;amp;#928;&amp;amp;#959;&amp;amp;#953;&amp;amp;#959; &amp;amp;#964;&amp;amp;#959; &amp;amp;#945;&amp;amp;#960;&amp;amp;#959;&amp;amp;#964;&amp;amp;#941;&amp;amp;#955;&amp;amp;#949;&amp;amp;#963;&amp;amp;#956;&amp;amp;#945;:&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;
+&amp;amp;gt;&amp;amp;gt;&amp;amp;gt;len(&amp;#39;&amp;amp;#931;&amp;amp;#949; &amp;amp;#947;&amp;amp;#957;&amp;amp;#969;&amp;amp;#961;&amp;amp;#943;&amp;amp;#950;&amp;amp;#969; &amp;amp;#945;&amp;amp;#960;&amp;amp;#972; &amp;amp;#964;&amp;amp;#951;&amp;amp;#957; &amp;amp;#954;&amp;amp;#972;&amp;amp;#968;&amp;amp;#951;&amp;#39;.split())&amp;lt;/pre&amp;gt;
+&amp;lt;div class=&amp;#34;wrapper-problem-response&amp;#34; tabindex=&amp;#34;-1&amp;#34; aria-label=&amp;#34;Question 3&amp;#34; role=&amp;#34;group&amp;#34;&amp;gt;&amp;lt;div class=&amp;#34;choicegroup capa_inputtype&amp;#34; id=&amp;#34;inputtype_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1&amp;#34;&amp;gt;
+    &amp;lt;fieldset aria-describedby=&amp;#34;status_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1&amp;#34;&amp;gt;
+          
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1&amp;#34; id=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1_choice_0&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_0&amp;#34;/&amp;gt;&amp;lt;label id=&amp;#34;e039f5c4bfa04b9da0c62e11b5eeab4a_4_1-choice_0-label&amp;#34; for=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1_choice_0&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1&amp;#34;&amp;gt; 5
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1&amp;#34; id=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1_choice_1&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_1&amp;#34;/&amp;gt;&amp;lt;label id=&amp;#34;e039f5c4bfa04b9da0c62e11b5eeab4a_4_1-choice_1-label&amp;#34; for=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1_choice_1&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1&amp;#34;&amp;gt; 23
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1&amp;#34; id=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1_choice_2&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_2&amp;#34;/&amp;gt;&amp;lt;label id=&amp;#34;e039f5c4bfa04b9da0c62e11b5eeab4a_4_1-choice_2-label&amp;#34; for=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1_choice_2&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1&amp;#34;&amp;gt; IndexError
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1&amp;#34; id=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1_choice_3&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_3&amp;#34;/&amp;gt;&amp;lt;label id=&amp;#34;e039f5c4bfa04b9da0c62e11b5eeab4a_4_1-choice_3-label&amp;#34; for=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1_choice_3&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1&amp;#34;&amp;gt; &amp;#39;&amp;amp;#931;&amp;amp;#949;&amp;#39;
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1&amp;#34; id=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1_choice_4&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_4&amp;#34;/&amp;gt;&amp;lt;label id=&amp;#34;e039f5c4bfa04b9da0c62e11b5eeab4a_4_1-choice_4-label&amp;#34; for=&amp;#34;input_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1_choice_4&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1&amp;#34;&amp;gt; &amp;#39;&amp;amp;#931; &amp;amp;#947; &amp;amp;#945; &amp;amp;#964; &amp;amp;#954;&amp;#39;
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+        &amp;lt;span id=&amp;#34;answer_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1&amp;#34;/&amp;gt;
+    &amp;lt;/fieldset&amp;gt;
+    &amp;lt;div class=&amp;#34;indicator-container&amp;#34;&amp;gt;
+          
+
+&amp;lt;span class=&amp;#34;status unanswered&amp;#34; id=&amp;#34;status_e039f5c4bfa04b9da0c62e11b5eeab4a_4_1&amp;#34; data-tooltip=&amp;#34;Not yet answered.&amp;#34;&amp;gt;
+  &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;&amp;amp;#945;&amp;amp;#957;&amp;amp;#945;&amp;amp;#960;&amp;amp;#940;&amp;amp;#957;&amp;amp;#964;&amp;amp;#951;&amp;amp;#964;&amp;amp;#959;&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;#34;status-icon&amp;#34; aria-hidden=&amp;#34;true&amp;#34;/&amp;gt;
+&amp;lt;/span&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+
+
+&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;#34;action&amp;#34;&amp;gt;
+    &amp;lt;input type=&amp;#34;hidden&amp;#34; name=&amp;#34;problem_id&amp;#34; value=&amp;#34;Q2.2&amp;#34; /&amp;gt;
+    &amp;lt;div class=&amp;#34;submit-attempt-container&amp;#34;&amp;gt;
+      &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;submit btn-brand&amp;#34; data-submitting=&amp;#34;Υποβάλλεται&amp;#34; data-value=&amp;#34;Υποβολή&amp;#34; data-should-enable-submit-button=&amp;#34;True&amp;#34; aria-describedby=&amp;#34;submission_feedback_e039f5c4bfa04b9da0c62e11b5eeab4a&amp;#34; &amp;gt;
+          &amp;lt;span class=&amp;#34;submit-label&amp;#34;&amp;gt;Υποβολή&amp;lt;/span&amp;gt;
+      &amp;lt;/button&amp;gt;
+      &amp;lt;div class=&amp;#34;submission-feedback&amp;#34; id=&amp;#34;submission_feedback_e039f5c4bfa04b9da0c62e11b5eeab4a&amp;#34;&amp;gt;
+          Έχετε χρησιμοποιήσει 0 από 2 υποβολές
+        &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;Σε κάποιες ασκήσεις έχετε την επιλογή της αποθήκευσης, της επαναφοράς, της βοήθειας ή της προβολής των απαντήσεων. Οι επιλογές αυτές βρίσκονται κάτω από το κουμπί της Υποβολής.&amp;lt;/span&amp;gt;
+      &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;#34;problem-action-buttons-wrapper&amp;#34;&amp;gt;
+      &amp;lt;span class=&amp;#34;problem-action-button-wrapper&amp;#34;&amp;gt;
+          &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;save problem-action-btn btn-default btn-small&amp;#34; data-value=&amp;#34;Αποθήκευση&amp;#34;&amp;gt;
+              &amp;lt;span class=&amp;#34;icon fa fa-floppy-o&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+              &amp;lt;span aria-hidden=&amp;#34;true&amp;#34;&amp;gt;Αποθήκευση&amp;lt;/span&amp;gt;
+              &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;Save your answer&amp;lt;/span&amp;gt;
+          &amp;lt;/button&amp;gt;
+      &amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+    
+
+
+&amp;lt;div class=&amp;#34;notification warning notification-gentle-alert
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-exclamation-circle&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;e039f5c4bfa04b9da0c62e11b5eeab4a-problem-title&amp;#34;&amp;gt;
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+    
+
+
+&amp;lt;div class=&amp;#34;notification warning notification-save
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-save&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;e039f5c4bfa04b9da0c62e11b5eeab4a-problem-title&amp;#34;&amp;gt;None
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+    
+    
+
+
+&amp;lt;div class=&amp;#34;notification general notification-show-answer
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-info-circle&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;e039f5c4bfa04b9da0c62e11b5eeab4a-problem-title&amp;#34;&amp;gt;Η σωστή απάντηση ή απαντήσεις φέρουν την κατάλληλη ένδειξη στις ερωτήσεις πολλαπλής επιλογής και παρατίθενται ολογράφως στις ερωτήσεις αντιστοίχισης και συμπλήρωσης.
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt;
+"
+     data-graded="False"&gt;
+    &lt;p class="loading-spinner"&gt;
+        &lt;i class="fa fa-spinner fa-pulse fa-2x fa-fw"&gt;&lt;/i&gt;
+        &lt;span class="sr"&gt;Loading&amp;hellip;&lt;/span&gt;
+    &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+  
+  &lt;script type="text/javascript"&gt;
+    (function (require) {
+        require(['/static/js/dateutil_factory.be68acdff619.js?raw'], function () {
+          require(['js/dateutil_factory'], function (DateUtilFactory) {
+            
+    DateUtilFactory.transform('.localized-datetime');
+
+          });
+        });
+    }).call(this, require || RequireJS.require);
+  &lt;/script&gt;
+
+
+&lt;script&gt;
+    function emit_event(message) {
+        parent.postMessage(message, '*');
+    }
+&lt;/script&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_content" role="tabpanel" aria-labelledby="tab_0">
+    
+<div class="xblock xblock-student_view xblock-student_view-vertical xblock-initialized" data-course-id="course-v1:ComputerScience+CS1.1+2017_T4" data-init="VerticalStudentView" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="vertical" data-usage-id="block-v1:ComputerScience+CS1.1+2017_T4+type@vertical+block@81cbfeffe81b47418e72e65615232df7" data-request-token="e7f61fccecb011eba913a5099b084e0f" data-graded="False" data-has-score="False">
+  
+
+
+
+
+
+  <h2 class="hd hd-2 unit-title">Σημειώσεις</h2>
+
+
+  
+
+
+
+<div class="bookmark-button-wrapper">
+  <button class="btn btn-link bookmark-button" aria-pressed="false" data-bookmark-id="pacos,block-v1:ComputerScience+CS1.1+2017_T4+type@vertical+block@81cbfeffe81b47418e72e65615232df7" data-bookmarks-api-url="/api/bookmarks/v1/bookmarks/">
+     <span class="bookmark-text">Προσθέστε σελιδοδείκτη σε αυτή τη σελίδα</span>
+    </button>
+</div>
+
+
+
+<div class="vert-mod">
+    <div class="vert vert-0" data-id="block-v1:ComputerScience+CS1.1+2017_T4+type@html+block@90b91135631e4f85a884bb1e415de463">
+        
+<div class="xblock xblock-student_view xblock-student_view-html xmodule_display xmodule_HtmlBlock xblock-initialized" data-course-id="course-v1:ComputerScience+CS1.1+2017_T4" data-init="XBlockToXModuleShim" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="html" data-usage-id="block-v1:ComputerScience+CS1.1+2017_T4+type@html+block@90b91135631e4f85a884bb1e415de463" data-request-token="e7f61fccecb011eba913a5099b084e0f" data-graded="False" data-has-score="False">
+  
+  <link rel="stylesheet" href="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/default.css">
+<script src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<h1>Συμβολοσειρές strings</h1>
+<h3>Δημιουργία – δεικτοδότηση</h3>
+<table><tbody><tr>
+<td style="border:0px;"><pre><code class="python hljs">
+<span class="hljs-meta">&gt;&gt;&gt; </span>name = <span class="hljs-string">"Αγαμέμνων"</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>name
+<span class="hljs-string">'Αγαμέμνων'</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>name[<span class="hljs-number">0</span>]
+<span class="hljs-string">'Α'</span>
+</code>
+</pre></td>
+
+<td style="border:0px;"><img src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/02_strings_a.svg"></td>
+  </tr>
+</tbody></table>
+
+<p>Μια συμβολοσειρά είναι μια ακολουθία χαρακτήρων που
+περικλείεται από μονά ή διπλά εισαγωγικά</p>
+<pre><code class="python hljs">
+<span class="hljs-meta">&gt;&gt;&gt; </span>name = <span class="hljs-string">'Αγαμέμνων'</span>
+</code>
+</pre>
+
+<h3>Χαρακτήρες – κωδικοποίηση</h3>
+<table>
+  <tbody><tr>
+    <td style="border:0px;">
+    <pre><code class="python hljs">
+    &gt;&gt;&gt; ord(<span class="hljs-string">"α"</span>)
+    <span class="hljs-number">945</span>
+    &gt;&gt;&gt; ord(<span class="hljs-string">"ά"</span>)
+    <span class="hljs-number">940</span>
+    &gt;&gt;&gt; ord(<span class="hljs-string">"\n"</span>)
+    <span class="hljs-number">10</span>
+    &gt;&gt;&gt; ord(<span class="hljs-string">" "</span>)
+    <span class="hljs-number">32</span>
+    </code></pre>
+    </td>
+    <td style="border:0px;">Οι χαρακτήρες αποθηκεύονται ως
+      ακέραιοι μήκους 1 έως 4 bytes. <br>
+Η συνάρτηση ord(χαρακτήρας) μας
+      επιστρέφει τον κωδικό τους.<br>
+H συνάρτηση chr(ακέραιος) μας λέει
+σε ποιον χαρακτήρα αντιστοιχεί ένας
+      κωδικός.<br>
+Υπάρχουν μη εκτυπούμενοι
+χαρακτήρες "\n", "\t" κλπ.</td>
+  </tr>
+</tbody></table>
+
+<h3>Τεμαχισμός συμβολοσειρών (slice)</h3>
+<img src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/02_strings_b.svg">
+<pre><code class="python hljs">
+<span class="hljs-meta">&gt;&gt;&gt; </span>s = <span class="hljs-string">"κάτω στους πέρα "</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>s[<span class="hljs-number">5</span>:<span class="hljs-number">10</span>]
+<span class="hljs-string">'στους'</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>s[<span class="hljs-number">5</span>:]
+<span class="hljs-string">'στους πέρα '</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>s[:<span class="hljs-number">5</span>]
+<span class="hljs-string">'κάτω '</span>
+</code></pre>
+
+<p>Τμήμα μιας συμβολοσειράς ορίζεται από το χαρακτήρα αρχής μέχρι
+τον χαρακτήρα τερματισμού χωρίς να περιλαμβάνεται ο τελευταίος</p>
+
+<h3>Πράξεις με συμβολοσειρές</h3>
+<p>Οι συμβολοσειρές είναι <b>αμετάβλητες</b> ακολουθίες
+χαρακτήρων, δεν επιτρέπεται η αλλαγή τους.</p>
+<pre><code class="python hljs">
+<span class="hljs-meta">&gt;&gt;&gt; </span>name = <span class="hljs-string">"nikos"</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>name[<span class="hljs-number">0</span>] = <span class="hljs-string">"N"</span>
+Traceback (most recent call last):
+  File <span class="hljs-string">"&lt;stdin&gt;"</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;module&gt;
+TypeError: <span class="hljs-string">'str'</span> object does <span class="hljs-keyword">not</span> support item assignment
+</code></pre>
+<p>Επιτρέπεται όμως η πρόσθεση συμβολοσειρών <b>s1 + s2</b>
+  και ο πολλαπλασιασμός συμβολοσειράς με ακέραιο <b>s * n</b></p>
+
+
+
+<h3>Μήκος συμβολοσειράς</h3>
+<pre><code class="python hljs">
+<span class="hljs-meta">&gt;&gt;&gt; </span>s = <span class="hljs-string">"κάτω στους πέρα "</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>len(s)
+<span class="hljs-number">16</span>
+</code></pre>
+
+<p>Η συνάρτηση len(s) μας δείνει το πλήθος χαρακτήρων της
+  συμβολοσειράς</p>
+<p><b><u>Ερώτηση:</u></b> τι θα πάρουμε από την s[ len(s) ]</p>
+<h3>Επανάληψη: πράξεις με συμβολοσειρές</h3>
+<table>
+  <tbody><tr>
+    <td><b>τελεστής</b></td>
+      <td><b>αποτέλεσμα</b></td>
+  </tr>
+    <tr>
+    <td>&lt;seq&gt; + &lt;seq&gt;</td>
+    <td>συνένωση</td>
+  </tr>
+    <tr>
+    <td>&lt;seq&gt; * &lt;int&gt;</td>
+    <td>επανάληψη</td>
+  </tr>
+      <tr>
+    <td>&lt;seq&gt;[]</td>
+    <td>δείκτης</td>
+  </tr>
+        <tr>
+    <td>len(&lt;seq&gt;)</td>
+    <td>μήκος ακολουθίας</td>
+  </tr>
+        <tr>
+    <td>&lt;seq&gt;[:]</td>
+    <td>τεμαχισμός</td>
+  </tr>
+        <tr>
+    <td>for &lt;var&gt; in &lt;seq&gt;:</td>
+    <td>επανάληψη</td>
+  </tr>
+        <tr>
+    <td>&lt;expr&gt; in &lt;seq&gt;</td>
+    <td>συμμετοχή (Boolean)</td>
+  </tr>
+</tbody></table>
+
+<h3>Μέθοδοι συμβολοσειρών</h3>
+<pre><code class="python hljs">
+<span class="hljs-meta">&gt;&gt;&gt; </span>s = <span class="hljs-string">"κάτω στους πέρα "</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>s.split()
+[<span class="hljs-string">'κάτω'</span>, <span class="hljs-string">'στους'</span>, <span class="hljs-string">'πέρα'</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>s.upper()
+<span class="hljs-string">'ΚΆΤΩ ΣΤΟΥΣ ΠΈΡΑ '</span>
+</code></pre>
+<p>Υπάρχουν πολλές ακόμη μέθοδοι που εφαρμόζονται σε μια
+συμβολοσειρά s, για αναζήτηση, μετατροπή τους, εξαγωγή
+λέξεων από κείμενο, έλεγχο αν το κείμενο περιέχει αριθμούς
+ή γράμματα, κλπ.</p>
+
+
+<h3>Κύριες μέθοδοι συμβολοσειρών</h3>
+<pre><code class="python hljs">
+s.count(str, beg= <span class="hljs-number">0</span>,end=len(string))
+s.decode(encoding=<span class="hljs-string">'UTF-8'</span>,errors=<span class="hljs-string">'strict'</span>)
+s.encode(encoding=<span class="hljs-string">'UTF-8'</span>,errors=<span class="hljs-string">'strict'</span>)
+s.endswith(suffix, beg=<span class="hljs-number">0</span>, end =len(string))
+s.find(str, beg=<span class="hljs-number">0</span> end=len(string)) <span class="hljs-comment"># -1 αν δεν βρεθεί</span>
+s.isalpha()
+s.isdigit()
+s.islower()
+s.join(seq)
+s.format(param)
+s.replace(old, new [, max])
+s.split(str=<span class="hljs-string">""</span>, num=string.count(str))
+s.startswith(str, beg = <span class="hljs-number">0</span>, end = len(string))
+s.strip([chars])
+s.upper()
+s.lower()
+s.capitalize()
+</code></pre>
+
+<h3>Ασκήσεις στις συμβολοσειρές</h3>
+<p><b>2.1</b> Έστω name = "κατερίνα" . Να γράψετε τις κατάλληλες εντολές ώστε η
+  μεταβλητή να περιέχει το όνομα με αρχικό κεφαλαίο γράμμα</p>
+<p><b>2.2</b></p><pre><code class="python hljs">stixos = <span class="hljs-string">"Μένω μονάχος στο παρόν μου"</span>
+n = stixos[:<span class="hljs-number">5</span>]+stixos[<span class="hljs-number">-9</span>:<span class="hljs-number">-4</span>]</code></pre>
+  <p>Ποια η τιμή της μεταβλητής n;</p>
+<p><b>2.3</b>
+  Να ορίσετε μια μεταβλητή τύπου str που περιέχει το εξής κείμενο:</p>
+<pre><code class="python hljs">=========================
+   Αρχή Προγράμματος
+=========================</code></pre>
+
+<p><a href="https://mathesis.cup.gr/assets/courseware/v1/138d2618365a0cb453557492ce616d68/asset-v1:ComputerScience+CS1.1+2017_T4+type@asset+block/02_strings.pdf">Μάθημα 2 [PDF]</a></p>
+</div>
+
+    </div>
+</div>
+
+
+  
+  <script type="text/javascript">
+    (function (require) {
+        require(['/static/js/dateutil_factory.be68acdff619.js?raw'], function () {
+          require(['js/dateutil_factory'], function (DateUtilFactory) {
+            
+    DateUtilFactory.transform('.localized-datetime');
+
+          });
+        });
+    }).call(this, require || RequireJS.require);
+  </script>
+
+
+<script>
+    function emit_event(message) {
+        parent.postMessage(message, '*');
+    }
+</script>
+
+</div>
+
+  </div>
+
+  <nav class="sequence-bottom" aria-label="Ενότητα">
+    <button class="sequence-nav-button button-previous">
+      <span class="icon fa fa-chevron-prev" aria-hidden="true"></span>
+      <span>Προηγούμενο </span>
+    </button>
+    <button class="sequence-nav-button button-next">
+      <span>Επόμενο  </span>
+      <span class="icon fa fa-chevron-next" aria-hidden="true"></span>
+    </button>
+  </nav>
+</div>
+
+</div>
+
+        </main>
+    </section>
+
+    <section class="courseware-results-wrapper">
+      <div id="loading-message" aria-live="polite" aria-relevant="all"></div>
+      <div id="error-message" aria-live="polite"></div>
+      <div class="courseware-results search-results" data-course-id="course-v1:ComputerScience+CS1.1+2017_T4" data-lang-code="el"></div>
+    </section>
+
+  </div>
+  
+
+
+
+
+
+
+
+
+
+    
+    
+    <script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/CourseSock.207e89e610bb26d251c9.713b569749c9.js"></script>
+      <script type="text/javascript">
+        
+    new CourseSock({
+        el:'.verification-sock'
+    });
+
+      </script>
+
+
+</div>
+<div class="container-footer">
+</div>
+
+
+  
+  <script type="text/javascript">
+    (function (require) {
+        require(['/static/js/commerce/track_ecommerce_events.0a92c313c996.js?raw'], function () {
+          require(['js/commerce/track_ecommerce_events'], function (TrackECommerceEvents) {
+            
+
+  var fbeLink = $("#FBE_banner");
+  var welcomeLink = $("#welcome");
+  var accessDeniedUpsellLink = $("#accessDeniedUpsell");
+  var sockLink = $("#sock");
+
+  TrackECommerceEvents.trackUpsellClick(fbeLink, 'in_course_audit_access_expires', {
+      pageName: "in_course",
+      linkType: "link",
+      linkCategory: "FBE_banner"
+  });
+
+  TrackECommerceEvents.trackUpsellClick(welcomeLink, 'in_course_welcome', {
+      pageName: "in_course",
+      linkType: "link",
+      linkCategory: "welcome"
+  });
+
+  TrackECommerceEvents.trackUpsellClick(accessDeniedUpsellLink, 'in_course_upgrade', {
+    pageName: "in_course",
+    linkType: "link",
+    linkCategory: "(none)"
+  });
+
+  TrackECommerceEvents.trackUpsellClick(sockLink, 'in_course_sock', {
+      pageName: "in_course",
+      linkType: "button",
+      linkCategory: "green_upgrade"
+  });
+
+
+          });
+        });
+    }).call(this, require || RequireJS.require);
+  </script>
+
+
+      
+    </div>
+
+        
+
+
+
+<!--ngick already moved to ngextra.css after updating assets remove it-->
+<style>
+/*hide the search courses on first page not yes moved to ngextra.css*/
+.home>header .title .course-search{
+display:none;
+}
+.find-courses .search-facets .header-facet{
+display:none;
+}
+/*remove the double title for every xblock*/
+/*.xblock .xblock h2{
+display:none;
+}*/
+
+/*The following are for about page*/
+/*  .course-info header.course-profile .intro-inner-wrapper .intro > .heading-group h1{
+   font-size:x-large; 
+  }*/
+/*for hidding a link like physics, history in the about page course just after the course title*/
+.course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1 button{
+display:none!important;
+}
+a.nglink{
+    color:black;
+    cursor: pointer;
+  }
+a.nglink:link{
+  color:black !important;
+}
+a.nglink:visited{
+  color:black !important;
+}
+a.nglink:hover{
+ color:green;
+}
+  p.ng{
+   text-align:justify; 
+   font-family:"Noto Sans";
+      }
+  ul.ng{
+   text-align:justify; 
+   font-family:"Noto Sans";
+  }
+  .ngbanner{
+    background: rgba(255,255,255,0.93);
+    border: 1px solid #646464;
+    box-shadow: 0 4px 25px 0 rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    padding:15px;
+    margin-top:20px;
+  a}*/
+/*end of about page */
+
+.banner_c{
+position:absolute;
+height:18px;
+background:green;
+color:white;
+line-height:18px;
+font-weight:bold;
+font-size:0.7em;
+top:142px;
+display:block;
+width:100%;
+}
+
+
+
+
+
+
+
+
+/*For hiding email notifications for forum*/
+/* .home-helpgrid tr.helpgrid-row.helpgrid-row-notification{
+display:none!important;
+}*/
+/* until here must moved to css*/
+
+.nav-colophon {
+margin:0px!important;
+}
+.nav-colophon li{
+float:left;
+}
+p.ngabout {
+line-height:1.6em;
+} 
+div.references{
+float:right;
+margin:0px!important;
+width:auto!important;
+}
+a.share{
+ color:gray!important;
+ transition:color 0.4s ease!important;
+}
+a.share:hover{
+color:#0078b0!important;
+border-bottom:none!important;
+}
+
+
+.nav-inline{
+text-align:center;
+}
+.nav-inline span{
+margin-right:15px;
+}
+.nav-inline span a{
+color:#464646!important;
+}
+
+
+.nav-inline span a:hover{
+color:gray!important;
+}
+.leftcol{
+float:left;
+font-size:18px;
+font-weight:bold;
+margin-top:30px;
+}
+.rightcol{
+float:right;
+font-size:25px;
+margin-top:35px;
+}
+.midcol{
+margin-left:auto;
+margin-right:auto;
+text-align:center;
+/*overflow:auto;*/
+}
+
+
+</style>
+
+
+
+<div class="wrapper wrapper-footer">
+  <footer id="footer-openedx">
+      <nav class="nav-inline">
+        <ol>
+          <span><a href="https://mathesis.cup.gr/foreas">ΠΕΡΙ</a></span>
+          <span><a href="https://mathesis.cup.gr/news">ΝΕΑ</a></span>
+          <span><a href="https://mathesis.cup.gr/faq">ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ</a></span>
+          <span><a href="https://mathesis.cup.gr/honor">ΟΡΟΙ ΧΡΗΣΗΣ</a></span>
+          <span><a href="https://mathesis.cup.gr/privacy">ΠΡΟΣΩΠΙΚΑ ΔΕΔΟΜΕΝΑ</a></span>
+          <span><a href="https://mathesis.cup.gr/contact">ΕΠΙΚΟΙΝΩΝΙΑ</a></span>
+          <span><a href="https://pay.mathesis.org/el/payments/donate/">ΔΩΡΕΕΣ</a></span>
+        </ol>
+      </nav>
+
+<p><br></p>
+<p><br></p>
+<div class="leftcol">
+<font size="" style="color:#575757">© Mathesis</font>
+<a target="_blank" href="http://open.edx.org/"><img alt="Βασισμένο στο Open edX" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/openedx.png" width="100" style="margin-top:-6px;"></a>
+
+</div>
+
+
+<div class="rightcol">
+<a target="_blank" href="https://www.facebook.com/mathesisatcreteuniversitypress" class="share"><i class="icon fa fa-facebook-square"></i></a>
+<a target="_blank" href="https://www.instagram.com/mathesis_cup/" class="share"><i class="icon fa fa-instagram"></i></a>
+<a target="_blank" href="https://twitter.com/mathesiscup" class="share"><i class="icon fa fa-twitter-square"></i></a>
+<a target="_blank" href="https://www.linkedin.com/company/mathesis-crete-university-press" class="share"> <i class="icon fa fa-linkedin-square"></i></a>
+</div>
+<div class="midcol">
+
+<table style="margin-right:auto;margin-left:auto;"><tbody><tr>
+<td style="vertical-align:middle;padding-right:20px;">
+	<a target="_blank" href="http://www.cup.gr/">
+<img src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/cupfl_o.svg" height="100px">
+</a></td>
+
+<!--<td style="vertical-align:middle;padding-right:20px;">
+	<font size="-1" style="color:#575757">Πανεπιστημιακές Εκδόσεις Κρήτης &ndash; CUP
+</font></a>
+<a target="_blank" href="http://www.forth.gr/"><font style="color: rgb(87, 87, 87); letter-spacing: 1px; font-size: 0.66em;"><br>Ίδρυμα Τεχνολογίας και Έρευνας &ndash; FORTH<br></font></a>
+
+
+</td>
+-->
+<td style="vertical-align:middle; text-align: center;"><font size="-1.2">Με δωρεά από το</font><br><a target="_blank" href="http://www.snf.org/el/">
+<img src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/SNFv.png" alt="ΙΔΡΥΜΑ ΣΤΑΥΡΟΣ ΝΙΑΡΧΟΣ" height="70px"></a></td>
+	<td style="text-align:center; font-size:1.9em;width: 100px;">
+
+</td></tr>
+</tbody></table>
+</div>
+  </footer>
+</div>
+
+
+  </div>
+
+  
+  
+  <script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/jquery.scrollTo.525edcc52fe8.js"></script>
+  <script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/jquery.flot.d3d45ff0c6a8.js"></script>
+
+  
+    
+<script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/lms-courseware.515d666a83a0.js" charset="utf-8"></script>
+
+
+  
+
+
+
+
+<script type="text/javascript">
+    // Fast Preview was introduced in 2.5. However, it
+    // causes undesirable flashing/font size changes when
+    // MathJax is used for interactive preview (equation editor).
+    // Setting processSectionDelay to 0 (see below) fully eliminates
+    // fast preview, but to reduce confusion, we are also setting
+    // the option as displayed in the context menu to false.
+    // When upgrading to 2.6, check if this variable name changed.
+    window.MathJax = {
+      menuSettings: {CHTMLpreview: false}
+    };
+</script>
+
+<script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [
+        ["\\(","\\)"],
+        ['[mathjaxinline]','[/mathjaxinline]']
+      ],
+      displayMath: [
+        ["\\[","\\]"],
+        ['[mathjax]','[/mathjax]']
+      ]
+    }
+  });
+</script>
+<script type="text/x-mathjax-config;executed=true">
+
+  // In order to eliminate all flashing during interactive
+  // preview, it is necessary to set processSectionDelay to 0
+  // (remove delay between input and output phases). This
+  // effectively disables fast preview, regardless of
+  // the fast preview setting as shown in the context menu.
+  MathJax.Hub.processSectionDelay = 0;
+
+  MathJax.Hub.signal.Interest(function(message) {
+    if(message[0] === "End Math") {
+        set_mathjax_display_div_settings();
+    }
+  });
+  function set_mathjax_display_div_settings() {
+    $('.MathJax_Display').each(function( index ) {
+      this.setAttribute('tabindex', '0');
+      this.setAttribute('aria-live', 'off');
+      this.removeAttribute('role');
+      this.removeAttribute('aria-readonly');
+    });
+  }
+</script>
+
+<script type="text/javascript">
+    // Activating Mathjax accessibility files
+    window.MathJax = {
+        menuSettings: {
+            collapsible: true,
+            autocollapse: false,
+            explorer: true
+        }
+    };
+</script>
+
+<!-- This must appear after all mathjax-config blocks, so it is after the imports from the other templates.
+     It can't be run through static.url because MathJax uses crazy url introspection to do lazy loading of
+     MathJax extension libraries -->
+<script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/MathJax.js"></script>
+
+
+    
+    
+      <script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/course_search_factory.a375768825a4.js"></script>
+    <script type="text/javascript">
+        (function (require) {
+            require(['course_search/js/course_search_factory'], function (CourseSearchFactory) {
+                
+        var courseId = $('.courseware-results').data('courseId');
+        CourseSearchFactory({
+            courseId: courseId,
+            searchHeader: $('.search-bar')
+        });
+    
+            });
+        }).call(this, require || RequireJS.require);
+    </script>
+
+
+  
+    
+      <script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/courseware_factory.1504fc10caef.js"></script>
+    <script type="text/javascript">
+        (function (require) {
+            require(['js/courseware/courseware_factory'], function (CoursewareFactory) {
+                
+    CoursewareFactory();
+  
+            });
+        }).call(this, require || RequireJS.require);
+    </script>
+
+
+
+  <script type="text/javascript">
+    var $$course_id = "course\u002Dv1:ComputerScience+CS1.1+2017_T4";
+  </script>
+
+
+<script src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/HtmlBlockPreview.9e67aec9582b4dfef5ba.48e99e8692d8.js" type="application/javascript"></script>
+<script src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/XModuleShim.e03571529f8ee6f0ae6d.ecc178d1e5da.js" type="application/javascript"></script>
+<script src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/VerticalStudentView.a1cd89253468e510325d.45b232b5a166.js" type="application/javascript"></script>
+<script src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/VideoBlockPreview.e3056ddb3b86682783f5.7c827e112b36.js" type="application/javascript"></script>
+<script src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/ProblemBlockPreview.4e23fe251b32a422d5ed.97b0fbff2de9.js" type="application/javascript"></script>
+<script src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/SequenceModule.78b6d7c66e02b8e62c93.09434990ddb4.js" type="application/javascript"></script>
+
+
+
+  
+
+
+
+  <script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/noreferrer.aa62a3e70ffa.js" charset="utf-8"></script>
+  <script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/navigation.08930e16ab3d.js" charset="utf-8"></script>
+  <script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/header.309a1243e175.js"></script>
+  
+  <script type="text/javascript" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/jquery_extend_patch.54dddef28d15.js"></script>
+
+
+
+
+<div id="reader-feedback" class="sr" aria-live="polite"></div><div class="tooltip" style="display: none; opacity: 0;"></div>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("consent","grant");fbq("init","1076740802350386");fbq("track","PageView");</script>
+<link rel="stylesheet" type="text/css" href="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/cookieconsent.min.css">
+
+
+      <script type="text/javascript" id="" src="./Σημειώσεις _ 2_ Συμβολοσειρές strings _ ΗΥ1.1 - Υλικό Μαθήματος _ Mathesis_files/cookieconsent.min.js"></script>
+<script type="text/javascript" id="">window.cookieconsent.initialise({palette:{popup:{background:"#000"},button:{background:"#f1d600"}},theme:"classic",position:"bottom","static":!1,revokable:!0,onStatusChange:function(a){console.log(this.hasConsented()?"enable cookies":"disable cookies")},onInitialise:function(a){a=this.options.type;var b=this.hasConsented();"opt-in"==a&&b&&console.log("opt-in???");"opt-out"!=a||b||console.log("opt-out!!!")},onStatusChange:function(a,b){a=this.options.type;b=this.hasConsented();"opt-in"==a&&b&&console.log("changed to opt-it!");
+"opt-out"!=a||b||console.log("changed to opt-out!!!")},onRevokeChoice:function(){},type:"opt-in",content:{href:"https://mathesis.cup.gr/honor",link:"\x3csmall\x3e\u039c\u03ac\u03b8\u03b5\u03c4\u03b5 \u03c0\u03b5\u03c1\u03b9\u03c3\u03c3\u03cc\u03c4\u03b5\u03c1\u03b1\x3c/small\x3e",allow:"\u0391\u03c0\u03bf\u03b4\u03ad\u03c7\u03bf\u03bc\u03b1\u03b9 \u03cc\u03bb\u03b1 \u03c4\u03b1 cookies",deny:"\u0394\u03b5\u03bd \u03b1\u03c0\u03bf\u03b4\u03ad\u03c7\u03bf\u03bc\u03b1\u03b9 \u03c4\u03b1 \u03bc\u03b7 \u03b1\u03bd\u03b1\u03b3\u03ba\u03b1\u03af\u03b1 cookies",
+close:"\x26#x274c;",policy:"\u03a0\u03bf\u03bb\u03b9\u03c4\u03b9\u03ba\u03ae cookies",message:"\x3csmall\x3e\u03a4\u03b1 \u03b1\u03c0\u03b1\u03c1\u03b1\u03af\u03c4\u03b7\u03c4\u03b1 cookies \u03b5\u03af\u03bd\u03b1\u03b9 \u03b1\u03bd\u03b1\u03b3\u03ba\u03b1\u03af\u03b1 \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03bf\u03c1\u03b8\u03ae \u03bb\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03c4\u03b7\u03c2 \u03c3\u03b5\u03bb\u03af\u03b4\u03b1\u03c2. \u03a4\u03b1 cookies \u03c3\u03c4\u03b1\u03c4\u03b9\u03c3\u03c4\u03b9\u03ba\u03ae\u03c2 \u03ba\u03b1\u03b9 \u03c0\u03c1\u03bf\u03ce\u03b8\u03b7\u03c3\u03b7\u03c2 \u03b4\u03b5\u03bd \u03b5\u03af\u03bd\u03b1\u03b9 \u03b1\u03bd\u03b1\u03b3\u03ba\u03b1\u03af\u03b1, \u03b1\u03bb\u03bb\u03ac \u03bc\u03b1\u03c2 \u03b2\u03bf\u03b7\u03b8\u03bf\u03cd\u03bd \u03bd\u03b1 \u03b2\u03b5\u03bb\u03c4\u03b9\u03ce\u03c3\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b9\u03c2 \u03c5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b5\u03c2 \u03c0\u03bf\u03c5 \u03c3\u03b1\u03c2 \u03c0\u03c1\u03bf\u03c3\u03c6\u03ad\u03c1\u03bf\u03c5\u03bc\u03b5. \u0391\u03c5\u03c4\u03ac \u03c4\u03b1 cookies \u03c3\u03c5\u03bb\u03bb\u03ad\u03b3\u03bf\u03c5\u03bd \u03c0\u03bb\u03b7\u03c1\u03bf\u03c6\u03bf\u03c1\u03af\u03b5\u03c2 \u03c3\u03c7\u03b5\u03c4\u03b9\u03ba\u03ac \u03bc\u03b5 \u03c4\u03bf\u03bd \u03c4\u03c1\u03cc\u03c0\u03bf \u03c0\u03bf\u03c5 \u03bf\u03b9 \u03b5\u03c0\u03b9\u03c3\u03ba\u03ad\u03c0\u03c4\u03b5\u03c2 \u03c7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03bf\u03cd\u03bd \u03c4\u03b7\u03bd \u03c3\u03b5\u03bb\u03af\u03b4\u03b1. \u0395\u03c0\u03af\u03c3\u03b7\u03c2 \u03bc\u03c0\u03bf\u03c1\u03b5\u03af \u03bd\u03b1 \u03c7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03b7\u03b8\u03bf\u03cd\u03bd \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03c0\u03c1\u03bf\u03b2\u03bf\u03bb\u03ae \u03b4\u03b9\u03b1\u03c6\u03b7\u03bc\u03af\u03c3\u03b5\u03c9\u03bd \u03c3\u03c4\u03b1 \u03ba\u03bf\u03b9\u03bd\u03c9\u03bd\u03b9\u03ba\u03ac \u03b4\u03af\u03ba\u03c4\u03c5\u03b1 \u03bf\u03b9 \u03bf\u03c0\u03bf\u03af\u03b5\u03c2 \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03bf\u03c5\u03bd \u03c3\u03c4\u03b1 \u03b5\u03bd\u03b4\u03b9\u03b1\u03c6\u03ad\u03c1\u03bf\u03bd\u03c4\u03ac \u03c3\u03b1\u03c2 \u03ae \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03bc\u03ad\u03c4\u03c1\u03b7\u03c3\u03b7 \u03c4\u03b7\u03c2 \u03b1\u03c0\u03bf\u03c4\u03b5\u03bb\u03b5\u03c3\u03bc\u03b1\u03c4\u03b9\u03ba\u03cc\u03c4\u03b7\u03c4\u03b1\u03c2 \u03bc\u03b9\u03b1\u03c2 \u03b4\u03b9\u03b1\u03c6\u03ae\u03bc\u03b9\u03c3\u03b7\u03c2. \u03a4\u03b1 \u03c0\u03c1\u03bf\u03b1\u03b9\u03c1\u03b5\u03c4\u03b9\u03ba\u03ac cookies \u03c3\u03c5\u03bb\u03bb\u03ad\u03b3\u03bf\u03c5\u03bd \u03c3\u03c5\u03b3\u03ba\u03b5\u03bd\u03c4\u03c1\u03c9\u03c4\u03b9\u03ba\u03ad\u03c2, \u03b1\u03bd\u03ce\u03bd\u03c5\u03bc\u03b5\u03c2 \u03c0\u03bb\u03b7\u03c1\u03bf\u03c6\u03bf\u03c1\u03af\u03b5\u03c2.\x3c/small\x3e"}});</script><div class="highslide-container" style="padding: 0px; border: none; margin: 0px; position: absolute; left: 0px; top: 0px; width: 100%; z-index: 1001; direction: ltr;"><a class="highslide-loading" title="Click to cancel" href="javascript:;" style="position: absolute; top: -9999px; opacity: 0.75; z-index: 1;">Loading...</a><div style="display: none;"></div><table cellspacing="0" style="padding: 0px; border: none; margin: 0px; visibility: hidden; position: absolute; border-collapse: collapse; width: 0px;"><tbody style="padding: 0px; border: none; margin: 0px;"><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://mathesis.cup.gr/static/EuCup/css/highslide/graphics/outlines/rounded-white.png&quot;) 0px 0px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://mathesis.cup.gr/static/EuCup/css/highslide/graphics/outlines/rounded-white.png&quot;) 0px -40px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://mathesis.cup.gr/static/EuCup/css/highslide/graphics/outlines/rounded-white.png&quot;) -20px 0px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://mathesis.cup.gr/static/EuCup/css/highslide/graphics/outlines/rounded-white.png&quot;) 0px -80px; height: 20px; width: 20px;"></td><td class="rounded-white highslide-outline" style="padding: 0px; border: none; margin: 0px; position: relative;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://mathesis.cup.gr/static/EuCup/css/highslide/graphics/outlines/rounded-white.png&quot;) -20px -80px; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: none; margin: 0px; height: auto;"><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://mathesis.cup.gr/static/EuCup/css/highslide/graphics/outlines/rounded-white.png&quot;) 0px -20px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://mathesis.cup.gr/static/EuCup/css/highslide/graphics/outlines/rounded-white.png&quot;) 0px -60px; height: 20px; width: 20px;"></td><td style="padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;https://mathesis.cup.gr/static/EuCup/css/highslide/graphics/outlines/rounded-white.png&quot;) -20px -20px; height: 20px; width: 20px;"></td></tr></tbody></table></div></body></html>
