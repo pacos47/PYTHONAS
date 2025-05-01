@@ -7,7 +7,7 @@ print("Η τιμή της θερμοκρασίας εναι : " , 20)
 #separator example : tab    , Absense of separator-> space
 print(10,20,30,sep="\t")
 # συνήθης τερματικός χαρακτήρας το new line ='\n' που ετσι κιαλλιώς τον βαζει μόνο του
-print(10,20,30,sep="\t", end='stop here!\n')
+print(10,20,30,sep="\t", end='   stop here!\n')
 ''' print with placeholders denoted by the escape character %, followed by the type (ex %s=string ,
 %d=digit etc...  and after that %( tuple to denote the corresponding values)'''
 print("Η τιμή της θερμοκρασίας σε βαθμούς %s εναι : %f " %("Κελσίου",35.7) ) #%f Sfor floating
